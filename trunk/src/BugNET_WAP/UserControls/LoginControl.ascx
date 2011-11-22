@@ -14,7 +14,7 @@
                         <table border="0" cellpadding="0" style="width: auto; margin-left: 25px; margin-top: 10px;">
                             <tr>
                                 <td align="right" class="label">
-                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName" Text="<%$ Resources:SharedResources, Username %>">Username:</asp:Label>
+                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName" Text="<%$ Resources:SharedResources, Username %>">用户名:</asp:Label>
                                 </td>
                                 <td>
                                     <asp:TextBox ID="UserName" runat="server" Width="110px"></asp:TextBox>
@@ -24,7 +24,7 @@
                             </tr>
                             <tr>
                                 <td align="right" class="label">
-                                    <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password" Text="<%$ Resources:SharedResources, Password %>">Password:</asp:Label>
+                                    <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password" Text="<%$ Resources:SharedResources, Password %>">密码:</asp:Label>
                                 </td>
                                 <td>
                                     <asp:TextBox ID="Password" runat="server" TextMode="Password" Width="110px"></asp:TextBox>
