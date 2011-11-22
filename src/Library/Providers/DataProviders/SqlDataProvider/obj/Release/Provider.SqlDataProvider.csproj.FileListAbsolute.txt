@@ -1,0 +1,15 @@
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\bin\Release\BugNET.Providers.SqlDataProvider.dll
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\bin\Release\BugNET.Providers.SqlDataProvider.pdb
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\bin\Release\BugNET.Common.dll
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\bin\Release\BugNET.DAL.dll
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\bin\Release\BugNET.Entities.dll
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\bin\Release\log4net.dll
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\bin\Release\BugNET.Common.pdb
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\bin\Release\BugNET.DAL.pdb
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\bin\Release\BugNET.Entities.pdb
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\obj\Release\BugNET.Providers.SqlDataProvider.dll
+C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\obj\Release\BugNET.Providers.SqlDataProvider.pdb
+C:\Projects\bugnet\src\build\output\BugNET.Providers.SqlDataProvider.XML
+C:\Projects\bugnet\src\build\output\BugNET.Providers.SqlDataProvider.dll
+C:\Projects\bugnet\src\build\output\BugNET.Providers.SqlDataProvider.pdb

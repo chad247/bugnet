@@ -1,0 +1,10 @@
+C:\Projects\bugnet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.XML
+C:\Projects\bugnet\src\BugNET.SubversionHooks\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\bugnet\src\BugNET.SubversionHooks\obj\Release\BugNET.SubversionHooks.exe
+C:\Projects\bugnet\src\BugNET.SubversionHooks\obj\Release\BugNET.SubversionHooks.pdb
+C:\Projects\bugnet\src\build\output\BugNET.SubversionHooks\post-commit.bat
+C:\Projects\bugnet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.exe.config
+C:\Projects\bugnet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.exe
+C:\Projects\bugnet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.XmlSerializers.dll
+C:\Projects\bugnet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.pdb
+C:\Projects\bugnet\src\BugNET.SubversionHooks\obj\Release\BugNET.SubversionHooks.XmlSerializers.dll

@@ -1,0 +1,6 @@
+C:\Projects\bugnet\src\build\output\BugNET.HttpModules.Localization.XML
+C:\Projects\bugnet\src\build\output\BugNET.HttpModules.Localization.dll
+C:\Projects\bugnet\src\build\output\BugNET.HttpModules.Localization.pdb
+C:\Projects\bugnet\src\Library\HttpModules\Localization\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\bugnet\src\Library\HttpModules\Localization\obj\Release\BugNET.HttpModules.Localization.dll
+C:\Projects\bugnet\src\Library\HttpModules\Localization\obj\Release\BugNET.HttpModules.Localization.pdb

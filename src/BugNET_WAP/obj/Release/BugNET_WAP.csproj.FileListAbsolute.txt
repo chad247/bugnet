@@ -1,0 +1,10 @@
+C:\Projects\bugnet\src\build\output\BugNET.XML
+C:\Projects\bugnet\src\build\output\BugNET.dll
+C:\Projects\bugnet\src\build\output\BugNET.pdb
+C:\Projects\bugnet\src\BugNET_WAP\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\bugnet\src\BugNET_WAP\obj\Release\BugNET.Administration.Projects.UserControls.ProjectPriorities.resources
+C:\Projects\bugnet\src\BugNET_WAP\obj\Release\BugNET.Administration.Projects.UserControls.ProjectStatus.resources
+C:\Projects\bugnet\src\BugNET_WAP\obj\Release\GenerateResource.read.1.tlog
+C:\Projects\bugnet\src\BugNET_WAP\obj\Release\GenerateResource.write.1.tlog
+C:\Projects\bugnet\src\BugNET_WAP\obj\Release\BugNET.dll
+C:\Projects\bugnet\src\BugNET_WAP\obj\Release\BugNET.pdb

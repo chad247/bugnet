@@ -1,0 +1,6 @@
+C:\Projects\bugnet\src\BugNET.Common\bin\Release\BugNET.Common.dll
+C:\Projects\bugnet\src\BugNET.Common\bin\Release\BugNET.Common.pdb
+C:\Projects\bugnet\src\BugNET.Common\bin\Release\log4net.dll
+C:\Projects\bugnet\src\BugNET.Common\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\bugnet\src\BugNET.Common\obj\Release\BugNET.Common.dll
+C:\Projects\bugnet\src\BugNET.Common\obj\Release\BugNET.Common.pdb
