@@ -1,0 +1,11 @@
+C:\Projects\bugnet\src\BugNET.DAL\bin\Release\BugNET.DAL.dll
+C:\Projects\bugnet\src\BugNET.DAL\bin\Release\BugNET.DAL.pdb
+C:\Projects\bugnet\src\BugNET.DAL\bin\Release\BugNET.Common.dll
+C:\Projects\bugnet\src\BugNET.DAL\bin\Release\BugNET.Entities.dll
+C:\Projects\bugnet\src\BugNET.DAL\bin\Release\log4net.dll
+C:\Projects\bugnet\src\BugNET.DAL\bin\Release\BugNET.Common.pdb
+C:\Projects\bugnet\src\BugNET.DAL\bin\Release\BugNET.Entities.pdb
+C:\Projects\bugnet\src\BugNET.DAL\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\bugnet\src\BugNET.DAL\obj\Release\BugNET.DAL.dll
+C:\Projects\bugnet\src\BugNET.DAL\obj\Release\BugNET.DAL.pdb
+C:\Projects\bugnet\src\BugNET.DAL\bin\Release\AutoMapper.dll

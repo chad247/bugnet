@@ -1,0 +1,8 @@
+C:\Projects\bugnet\src\BugNET.Entities\bin\Release\BugNET.Entities.dll
+C:\Projects\bugnet\src\BugNET.Entities\bin\Release\BugNET.Entities.pdb
+C:\Projects\bugnet\src\BugNET.Entities\bin\Release\BugNET.Common.dll
+C:\Projects\bugnet\src\BugNET.Entities\bin\Release\BugNET.Common.pdb
+C:\Projects\bugnet\src\BugNET.Entities\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\bugnet\src\BugNET.Entities\obj\Release\BugNET.Entities.dll
+C:\Projects\bugnet\src\BugNET.Entities\obj\Release\BugNET.Entities.pdb
+C:\Projects\bugnet\src\BugNET.Entities\bin\Release\AutoMapper.dll

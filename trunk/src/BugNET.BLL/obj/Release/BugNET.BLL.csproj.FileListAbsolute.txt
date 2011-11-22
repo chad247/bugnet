@@ -1,0 +1,16 @@
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.BLL.dll
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.BLL.pdb
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.Common.dll
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.DAL.dll
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.Entities.dll
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.Providers.MembershipProviders.ExtendedSqlMembershipProvider.dll
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\log4net.dll
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.Common.pdb
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.DAL.pdb
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.Entities.pdb
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.Providers.MembershipProviders.ExtendedSqlMembershipProvider.pdb
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\BugNET.Providers.MembershipProviders.ExtendedSqlMembershipProvider.xml
+C:\Projects\bugnet\src\BugNET.BLL\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\bugnet\src\BugNET.BLL\obj\Release\BugNET.BLL.dll
+C:\Projects\bugnet\src\BugNET.BLL\obj\Release\BugNET.BLL.pdb
+C:\Projects\bugnet\src\BugNET.BLL\bin\Release\AutoMapper.dll
