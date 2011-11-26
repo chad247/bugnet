@@ -1458,8 +1458,6 @@
     <Content Include="Images\off.gif" />
     <Content Include="Images\on.gif" />
     <Content Include="Images\page_white_add.gif" />
-    <Content Include="Images\page_white_error.gif" />
-    <Content Include="Images\page_white_gear.gif" />
     <Content Include="Images\page_white_refresh.png" />
     <Content Include="Images\Priority\Blocker.gif" />
     <Content Include="Images\Priority\Critical.gif" />
@@ -1591,9 +1589,33 @@
       <Project>{171D523B-6F5D-4C45-B415-EC4CC32C4D91}</Project>
       <Name>BugNET.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Library\HttpModules\Authentication\HttpModule.Authentication.csproj">
+      <Project>{72BE8D7E-B026-45EE-8613-DFB1BB70FD02}</Project>
+      <Name>HttpModule.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\HttpModules\Localization\HttpModule.Localization.csproj">
+      <Project>{74376C46-4D55-4891-85D7-06A490FA9FD5}</Project>
+      <Name>HttpModule.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\HttpModules\MailBoxReader\HttpModule.MailBoxReader.csproj">
+      <Project>{4386AA43-F3FC-476D-B7E0-03DB537C88E0}</Project>
+      <Name>HttpModule.MailBoxReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Providers\DataProviders\SqlDataProvider\Provider.SqlDataProvider.csproj">
+      <Project>{DF8C87FA-3398-4AEE-99B0-D47F1831C158}</Project>
+      <Name>Provider.SqlDataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Providers\HtmlEditorProviders\CkHtmlEditorProvider\Provider.CkHtmlEditorProvider.csproj">
+      <Project>{2D1294FE-A204-4F2C-B90C-8A041F44E12A}</Project>
+      <Name>Provider.CkHtmlEditorProvider</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Library\Providers\HtmlEditorProviders\HtmlEditorProvider\Provider.HtmlEditorProvider.csproj">
       <Project>{C7D90E4C-AD95-4ADD-8242-2CD66F0BC89B}</Project>
       <Name>Provider.HtmlEditorProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Providers\HtmlEditorProviders\TextboxHtmlProvider\Provider.TextboxHtmlProvider.csproj">
+      <Project>{CA7E11AB-39FD-490A-A3A1-094BE9C5DB45}</Project>
+      <Name>Provider.TextboxHtmlProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\Library\Providers\MembershipProviders\Provider.MembershipProviders.csproj">
       <Project>{6B8EBBE2-196F-4F79-BC2F-918FC0AF3D67}</Project>
