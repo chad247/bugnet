@@ -373,7 +373,7 @@
     <value>User Accounts</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>UserName</value>
+    <value>用户名称</value>
   </data>
   <data name="UsernameRequiredErrorMessage" xml:space="preserve">
     <value>Username is required</value>
