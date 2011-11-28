@@ -952,7 +952,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   查找类似 用户名 的本地化字符串。
+        ///   查找类似 UserName 的本地化字符串。
         /// </summary>
         internal static string Username {
             get {
