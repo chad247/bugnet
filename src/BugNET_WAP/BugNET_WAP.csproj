@@ -18,7 +18,7 @@
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -425,6 +425,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SharedResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SharedResources.zh-CN1.designer.cs">
+      <DependentUpon>SharedResources.zh-CN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -959,6 +964,8 @@
     <Content Include="Images\package_go.gif" />
     <Content Include="Images\page_go.gif" />
     <Content Include="Images\page_white_delete.gif" />
+    <Content Include="Images\page_white_error.png" />
+    <Content Include="Images\page_white_gear.png" />
     <Content Include="Images\page_white_go.gif" />
     <Content Include="Images\page_white_put.gif" />
     <Content Include="Images\pencil.gif" />
@@ -1406,6 +1413,7 @@
     <Content Include="Account\App_LocalResources\Verify.aspx.resx">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Account\App_LocalResources\Login.aspx.zh-CN.resx" />
     <EmbeddedResource Include="Administration\Projects\UserControls\ProjectPriorities.ascx.resx">
       <DependentUpon>ProjectPriorities.ascx.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1459,8 +1467,6 @@
     <Content Include="Images\off.gif" />
     <Content Include="Images\on.gif" />
     <Content Include="Images\page_white_add.gif" />
-    <Content Include="Images\page_white_error.gif" />
-    <Content Include="Images\page_white_gear.gif" />
     <Content Include="Images\page_white_refresh.png" />
     <Content Include="Images\Priority\Blocker.gif" />
     <Content Include="Images\Priority\Critical.gif" />
@@ -1574,6 +1580,13 @@
     <Content Include="UserControls\App_LocalResources\PickImage.ascx.resx" />
     <Content Include="UserControls\App_LocalResources\CategoryTreeView.ascx.resx" />
     <Content Include="Errors\App_LocalResources\AccessDenied.aspx.resx" />
+    <Content Include="App_LocalResources\Default.aspx.zh-CN.resx" />
+    <Content Include="App_LocalResources\Feed.aspx.zh-CN.resx" />
+    <Content Include="App_GlobalResources\SharedResources.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SharedResources.zh-CN1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BugNET.BLL\BugNET.BLL.csproj">
@@ -1617,11 +1630,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>59847</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:59847/</IISUrl>
+          <IISUrl>http://localhost/bugnetdev</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
