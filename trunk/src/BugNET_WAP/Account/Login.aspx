@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Shared/SingleColumn.master"
-    Title="Login" CodeBehind="Login.aspx.cs" Inherits="BugNET.Account.Login" %>
+    Title="Login" CodeBehind="Login.aspx.cs" Inherits="BugNET.Account.Login" UICulture="auto" %>
 <%@ Register Assembly="DotNetOpenAuth" Namespace="DotNetOpenAuth.OpenId.RelyingParty" TagPrefix="rp" %>
 <%@ Register Src="~/UserControls/LoginControl.ascx" TagName="LoginControl" TagPrefix="uc1" %>
 
