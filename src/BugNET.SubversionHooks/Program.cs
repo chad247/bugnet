@@ -25,6 +25,8 @@ namespace BugNET.SubversionHooks
 
                     string repository = args[1];
                     string revision = args[2];
+                    //string repository = @"D:\SVN\test";
+                    //string revision = "69";
 
                     logger.InfoFormat("Executing IssueTrackerIntegration.UpdateIssueTrackerFromRevision(\"{0}\", \"{1}\")", repository, revision);
                     IssueTrackerIntegration integration = new IssueTrackerIntegration();

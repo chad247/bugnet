@@ -32,10 +32,14 @@ namespace BugNET.Webservices
         /// <param name="revisionDate">The revision date.</param>
         /// <param name="revisionMessage">The revision message.</param>
         /// <returns>The new id of the revision</returns>
+<<<<<<< .mine
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]        
+=======
         [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
+>>>>>>> .r6
         [WebMethod(EnableSession = true)]
         public bool CreateNewIssueRevision(int revision, int issueId, string repository, string revisionAuthor, string revisionDate, string revisionMessage)
-        {
+        {            
             if (issueId <= 0) throw new ArgumentOutOfRangeException("issueId");
 
             var projectId = IssueManager.GetById(issueId).ProjectId;
