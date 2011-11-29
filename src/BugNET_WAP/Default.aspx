@@ -1,5 +1,5 @@
 <%@ Page Language="c#" Inherits="BugNET._Default" Title="Home" MasterPageFile="~/Shared/TwoColumn.master"
-    CodeBehind="Default.aspx.cs" meta:resourcekey="Page" UICulture="auto" %>
+    CodeBehind="Default.aspx.cs" meta:resourcekey="Page" %>
 
 <%@ Import Namespace="BugNET.Entities" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
@@ -91,7 +91,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Left" runat="server">
     <div class="welcomemessage">
         <h2 class="title">
-            <asp:Label ID="lblApplicationTitle" runat="server" >BugNET Issue Tracker</asp:Label></h2>
+            <asp:Label ID="lblApplicationTitle" runat="server">BugNET Issue Tracker</asp:Label></h2>
         <div class="content">
             <p>
                 <asp:Label ID="WelcomeMessage" runat="Server"></asp:Label>
