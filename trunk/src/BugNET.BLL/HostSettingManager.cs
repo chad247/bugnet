@@ -183,8 +183,7 @@ namespace BugNET.BLL
         {
             get
             {
-                //return Get(HostSettingNames.ApplicationTitle, "BugNET Issue Tracker");\
-                return Get(HostSettingNames.ApplicationTitle, "问题跟踪系统");
+                return Get(HostSettingNames.ApplicationTitle, "BugNET Issue Tracker");
             }
         }
 

@@ -18,7 +18,7 @@
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -426,11 +426,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SharedResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\SharedResources.zh-CN.designer.cs">
-      <DependentUpon>SharedResources.zh-CN.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
@@ -613,11 +608,6 @@
     </Compile>
     <Compile Include="Projects\Roadmap.aspx.designer.cs">
       <DependentUpon>Roadmap.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Queries\QueryDetail.aspx.cs">
       <DependentUpon>QueryDetail.aspx</DependentUpon>
@@ -1039,6 +1029,7 @@
     <Content Include="Providers\DataProviders\SqlDataProvider\0.8.284.0.SqlDataProvider.sql" />
     <Content Include="Providers\DataProviders\SqlDataProvider\0.8.295.0.SqlDataProvider.sql" />
     <Content Include="Providers\DataProviders\SqlDataProvider\0.8.300.0.SqlDataProvider.sql" />
+    <Content Include="Providers\DataProviders\SqlDataProvider\0.9.126.0.SqlDataProvider.sql" />
     <Content Include="Providers\DataProviders\SqlDataProvider\BugNet.Data.SqlDataProvider.sql" />
     <Content Include="Providers\DataProviders\SqlDataProvider\BugNet.Schema.SqlDataProvider.sql" />
     <Content Include="Providers\DataProviders\SqlDataProvider\InstallCommon.sql" />
@@ -1415,7 +1406,6 @@
     <Content Include="Account\App_LocalResources\Verify.aspx.resx">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Account\App_LocalResources\Login.aspx.zh-CN.resx" />
     <EmbeddedResource Include="Administration\Projects\UserControls\ProjectPriorities.ascx.resx">
       <DependentUpon>ProjectPriorities.ascx.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1469,6 +1459,8 @@
     <Content Include="Images\off.gif" />
     <Content Include="Images\on.gif" />
     <Content Include="Images\page_white_add.gif" />
+    <Content Include="Images\page_white_error.gif" />
+    <Content Include="Images\page_white_gear.gif" />
     <Content Include="Images\page_white_refresh.png" />
     <Content Include="Images\Priority\Blocker.gif" />
     <Content Include="Images\Priority\Critical.gif" />
@@ -1582,19 +1574,6 @@
     <Content Include="UserControls\App_LocalResources\PickImage.ascx.resx" />
     <Content Include="UserControls\App_LocalResources\CategoryTreeView.ascx.resx" />
     <Content Include="Errors\App_LocalResources\AccessDenied.aspx.resx" />
-    <Content Include="App_GlobalResources\SharedResources.zh-CN.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>SharedResources.zh-CN.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_LocalResources\Default.aspx.zh-CN.resx">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_LocalResources\Feed.aspx.zh-CN.resx" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BugNET.BLL\BugNET.BLL.csproj">
@@ -1613,33 +1592,9 @@
       <Project>{171D523B-6F5D-4C45-B415-EC4CC32C4D91}</Project>
       <Name>BugNET.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Library\HttpModules\Authentication\HttpModule.Authentication.csproj">
-      <Project>{72BE8D7E-B026-45EE-8613-DFB1BB70FD02}</Project>
-      <Name>HttpModule.Authentication</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Library\HttpModules\Localization\HttpModule.Localization.csproj">
-      <Project>{74376C46-4D55-4891-85D7-06A490FA9FD5}</Project>
-      <Name>HttpModule.Localization</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Library\HttpModules\MailBoxReader\HttpModule.MailBoxReader.csproj">
-      <Project>{4386AA43-F3FC-476D-B7E0-03DB537C88E0}</Project>
-      <Name>HttpModule.MailBoxReader</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Library\Providers\DataProviders\SqlDataProvider\Provider.SqlDataProvider.csproj">
-      <Project>{DF8C87FA-3398-4AEE-99B0-D47F1831C158}</Project>
-      <Name>Provider.SqlDataProvider</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Library\Providers\HtmlEditorProviders\CkHtmlEditorProvider\Provider.CkHtmlEditorProvider.csproj">
-      <Project>{2D1294FE-A204-4F2C-B90C-8A041F44E12A}</Project>
-      <Name>Provider.CkHtmlEditorProvider</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Library\Providers\HtmlEditorProviders\HtmlEditorProvider\Provider.HtmlEditorProvider.csproj">
       <Project>{C7D90E4C-AD95-4ADD-8242-2CD66F0BC89B}</Project>
       <Name>Provider.HtmlEditorProvider</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Library\Providers\HtmlEditorProviders\TextboxHtmlProvider\Provider.TextboxHtmlProvider.csproj">
-      <Project>{CA7E11AB-39FD-490A-A3A1-094BE9C5DB45}</Project>
-      <Name>Provider.TextboxHtmlProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\Library\Providers\MembershipProviders\Provider.MembershipProviders.csproj">
       <Project>{6B8EBBE2-196F-4F79-BC2F-918FC0AF3D67}</Project>
@@ -1662,11 +1617,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>59847</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/BugNetDev/</IISUrl>
+          <IISUrl>http://localhost:59847/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
