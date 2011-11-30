@@ -1,4 +1,4 @@
-<%@ Page language="c#" Inherits="BugNET.SvnBrowse.SubversionBrowser"  MasterPageFile="~/Shared/SingleColumn.master" Title="Source" MaintainScrollPositionOnPostback="true" Codebehind="SubversionBrowser.aspx.cs" %>
+<%@ Page language="c#" Inherits="BugNET.SvnBrowse.SubversionBrowser"  MasterPageFile="~/Shared/SingleColumn.master" Title="Source" MaintainScrollPositionOnPostback="true" Codebehind="SubversionBrowser.aspx.cs" UICulture="auto" %>
 
   
     <asp:Content ContentPlaceHolderID="PageTitle" runat="server" ID="content5">

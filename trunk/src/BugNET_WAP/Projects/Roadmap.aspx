@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Shared/SingleColumn.master"  Title="Road Map" AutoEventWireup="true" meta:resourcekey="Page" Inherits="BugNET.Projects.Roadmap" Codebehind="RoadMap.aspx.cs" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Shared/SingleColumn.master"  Title="Road Map" AutoEventWireup="true" meta:resourcekey="Page" Inherits="BugNET.Projects.Roadmap" Codebehind="RoadMap.aspx.cs" UICulture="auto" %>
 <%@ Register TagPrefix="it" TagName="TextImage" Src="~/UserControls/TextImage.ascx" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" Runat="Server">

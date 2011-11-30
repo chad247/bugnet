@@ -1,5 +1,5 @@
-<%@ Page Language="C#" MasterPageFile="~/Shared/SingleColumn.master"  Title="<%$ Resources:Administration %>"  AutoEventWireup="true" Inherits="BugNET.Administration.Admin" Codebehind="Admin.aspx.cs" %>
-<asp:Content ID="Content2" ContentPlaceHolderID="Content" Runat="Server">
+<%@ Page Language="C#" MasterPageFile="~/Shared/SingleColumn.master"  Title="<%$ Resources:Administration %>"  AutoEventWireup="true" Inherits="BugNET.Administration.Admin" Codebehind="Admin.aspx.cs" UICulture="auto" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="Content"  Runat="Server">
     <h1 class="page-title"><asp:literal ID="AdminTitle" runat="Server" Text="<%$ Resources:Administration %>" /></h1>
     <div style="width:100%">
         <table width="400" style="margin: 0px auto -1px auto;text-align:left;" cellspacing="15">

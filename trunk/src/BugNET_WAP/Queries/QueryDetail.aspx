@@ -1,7 +1,7 @@
 <%@ Register TagPrefix="it" TagName="DisplayIssues" Src="~/UserControls/DisplayIssues.ascx" %>
 <%@ Register TagPrefix="it" TagName="PickQueryField" Src="~/UserControls/PickQueryField.ascx" %>
 <%@ Register TagPrefix="it" TagName="PickProject" Src="~/UserControls/PickProject.ascx" %>
-<%@ Page Language="c#" CodeBehind="QueryDetail.aspx.cs" AutoEventWireup="True" MasterPageFile="~/Shared/SingleColumn.master" Title="Query Detail" Inherits="BugNET.Queries.QueryDetail" %>
+<%@ Page Language="c#" CodeBehind="QueryDetail.aspx.cs" AutoEventWireup="True" MasterPageFile="~/Shared/SingleColumn.master" Title="Query Detail" Inherits="BugNET.Queries.QueryDetail" UICulture="auto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
     <BN:Message ID="Message1" runat="server"  Visible="False"  />
 	<table>

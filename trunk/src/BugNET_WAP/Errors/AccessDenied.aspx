@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Shared/SingleColumn.master" AutoEventWireup="true" CodeBehind="AccessDenied.aspx.cs" Inherits="BugNET.Errors.AccessDenied" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Shared/SingleColumn.master" AutoEventWireup="true" CodeBehind="AccessDenied.aspx.cs" Inherits="BugNET.Errors.AccessDenied" UICulture="auto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">

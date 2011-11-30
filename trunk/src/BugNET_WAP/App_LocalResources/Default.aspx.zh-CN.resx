@@ -121,16 +121,16 @@
     <value>管理员禁止匿名用户访问,请先注册或者登录!</value>
   </data>
   <data name="CreatedRecently.Text" xml:space="preserve">
-    <value>Created Recently</value>
+    <value>最近建立的</value>
   </data>
   <data name="Filters.Text" xml:space="preserve">
-    <value>Filters</value>
+    <value>过滤</value>
   </data>
   <data name="lblAll.Text" xml:space="preserve">
-    <value>All</value>
+    <value>所有</value>
   </data>
   <data name="ManagedBy.Text" xml:space="preserve">
-    <value>Managed By</value>
+    <value>负责人</value>
   </data>
   <data name="NextMilestoneDue" xml:space="preserve">
     <value>Next milestone due - {0}</value>
@@ -142,25 +142,25 @@
     <value>none</value>
   </data>
   <data name="NoProjectsToViewMessage" xml:space="preserve">
-    <value>There are no projects for you to view.</value>
+    <value>没有发现项目</value>
   </data>
   <data name="OpenIssuesCount" xml:space="preserve">
     <value>{0} open issues</value>
   </data>
   <data name="Page.Title" xml:space="preserve">
-    <value>主页</value>
+    <value>首页</value>
   </data>
   <data name="QuickLinks.Text" xml:space="preserve">
-    <value>Quick Links</value>
+    <value>快速链接</value>
   </data>
   <data name="QuickLinksFilters.Text" xml:space="preserve">
-    <value>Quick Links / Filters</value>
+    <value>快速链接 / 过滤</value>
   </data>
   <data name="RegisterAndLoginMessage" xml:space="preserve">
-    <value>You must login to view projects on this site.</value>
+    <value>站点要求必须先登录.</value>
   </data>
   <data name="UpdatedRecently.Text" xml:space="preserve">
-    <value>Updated Recently</value>
+    <value>最近修改的</value>
   </data>
   <data name="NoStatusSet" xml:space="preserve">
     <value>&lt;font color='red'&gt;Warning:&lt;/font&gt; No Statuses set on project.</value>
@@ -169,6 +169,6 @@
     <value>&lt;Font color='red'&gt;Warning:&lt;/font&gt; No Project Statuses are set to Closed</value>
   </data>
   <data name="AssignedToUser.Text" xml:space="preserve">
-    <value>Assigned to me</value>
+    <value>分配给我的</value>
   </data>
 </root>
