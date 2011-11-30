@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Shared/SingleColumn.master" CodeBehind="CloneProject.aspx.cs" Title="<%$ Resources:CloneProject %>" Inherits="BugNET.Administration.Projects.CloneProject" %>
+<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Shared/SingleColumn.master" CodeBehind="CloneProject.aspx.cs" Title="<%$ Resources:CloneProject %>" Inherits="BugNET.Administration.Projects.CloneProject" UICulture="auto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
       <h1 class="page-title"><asp:literal ID="CloneProjectTitle" runat="Server" Text="<%$ Resources:CloneProject %>" /></h1>

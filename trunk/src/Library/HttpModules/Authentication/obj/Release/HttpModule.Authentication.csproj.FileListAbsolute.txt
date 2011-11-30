@@ -4,3 +4,9 @@ C:\Projects\bugnet\src\build\output\BugNET.HttpModules.Authentication.pdb
 C:\Projects\bugnet\src\Library\HttpModules\Authentication\obj\Release\ResolveAssemblyReference.cache
 C:\Projects\bugnet\src\Library\HttpModules\Authentication\obj\Release\BugNET.HttpModules.Authentication.dll
 C:\Projects\bugnet\src\Library\HttpModules\Authentication\obj\Release\BugNET.HttpModules.Authentication.pdb
+D:\work\BugNet\BugNet\src\build\output\BugNET.HttpModules.Authentication.XML
+D:\work\BugNet\BugNet\src\build\output\BugNET.HttpModules.Authentication.dll
+D:\work\BugNet\BugNet\src\build\output\BugNET.HttpModules.Authentication.pdb
+D:\work\BugNet\BugNet\src\Library\HttpModules\Authentication\obj\Release\ResolveAssemblyReference.cache
+D:\work\BugNet\BugNet\src\Library\HttpModules\Authentication\obj\Release\BugNET.HttpModules.Authentication.dll
+D:\work\BugNet\BugNet\src\Library\HttpModules\Authentication\obj\Release\BugNET.HttpModules.Authentication.pdb

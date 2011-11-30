@@ -1,6 +1,6 @@
 <%@ Page Language="c#" ValidateRequest="false" Inherits="BugNET.Administration.Host.Settings"
     MasterPageFile="~/Shared/SingleColumn.master" Title="<%$ Resources:ApplicationConfiguration %>"
-    CodeBehind="Settings.aspx.cs" %>
+    CodeBehind="Settings.aspx.cs" UICulture="auto" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="Content">
     <h1 class="page-title">

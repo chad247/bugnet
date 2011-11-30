@@ -1,4 +1,4 @@
-<%@ Page language="c#" Inherits="BugNET.Administration.Projects.AddProject" ValidateRequest="false" meta:resourcekey="Page" MasterPageFile="~/Shared/SingleColumn.master" Title="Add Project" Codebehind="AddProject.aspx.cs" %>
+<%@ Page language="c#" Inherits="BugNET.Administration.Projects.AddProject" ValidateRequest="false" meta:resourcekey="Page" MasterPageFile="~/Shared/SingleColumn.master" Title="Add Project" Codebehind="AddProject.aspx.cs" UICulture="auto" %>
   
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
     <h1><asp:literal ID="NewProjectTitle" runat="Server" meta:resourcekey="NewProjectTitle"  /> (<asp:Literal id="lblStepNumber" runat="Server" />)</h1>

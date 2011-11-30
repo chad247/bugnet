@@ -1430,6 +1430,27 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Administration\App_LocalResources\Admin.aspx.zh-CN.resx" />
+    <Content Include="Administration\Projects\App_LocalResources\AddProject.aspx.zh-CN.resx" />
+    <Content Include="Administration\Projects\App_LocalResources\ProjectList.aspx.zh-CN.resx" />
+    <Content Include="Administration\Projects\App_LocalResources\CloneProject.aspx.zh-CN.resx" />
+    <Content Include="Administration\Projects\App_LocalResources\EditProject.aspx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\NewProjectIntro.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectSubversion.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\NewProjectSummary.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectCategories.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectCustomFields.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectDescription.ascx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectIssueTypes.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectMailbox.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectMembers.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectMilestones.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectNotifications.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectPriorities.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectResolutions.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectRoles.ascx.zh-CN.resx" />
+    <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectStatus.ascx.zh-CN.resx" />
     <EmbeddedResource Include="Administration\Projects\UserControls\ProjectPriorities.ascx.resx">
       <DependentUpon>ProjectPriorities.ascx.cs</DependentUpon>
       <SubType>Designer</SubType>
