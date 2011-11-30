@@ -433,6 +433,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="App_GlobalResources\Notifications.zh-CN.designer.cs">
+      <DependentUpon>Notifications.zh-CN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\Exceptions.zh-CN.designer.cs">
+      <DependentUpon>Exceptions.zh-CN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
@@ -1416,6 +1426,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Account\App_LocalResources\Login.aspx.zh-CN.resx" />
+    <Content Include="Account\App_LocalResources\Register.aspx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Administration\App_LocalResources\Admin.aspx.zh-CN.resx" />
     <EmbeddedResource Include="Administration\Projects\UserControls\ProjectPriorities.ascx.resx">
       <DependentUpon>ProjectPriorities.ascx.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1589,6 +1603,57 @@
       <LastGenOutput>SharedResources.zh-CN.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_GlobalResources\Notifications.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Notifications.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Exceptions.zh-CN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Exceptions.zh-CN.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="UserControls\App_LocalResources\LoginControl.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\Banner.ascx.zh-CN.resx" />
+    <Content Include="Projects\App_LocalResources\ProjectSummary.aspx.zh-CN.resx" />
+    <Content Include="Issues\App_LocalResources\MyIssues.aspx.zh-CN.resx" />
+    <Content Include="Issues\App_LocalResources\IssueDetail.aspx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Issues\App_LocalResources\IssueList.aspx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Issues\App_LocalResources\IssueSearch.aspx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Issues\UserControls\App_LocalResources\Comments.ascx.zh-CN.resx" />
+    <Content Include="Projects\App_LocalResources\ChangeLog.aspx.zh-CN.resx" />
+    <Content Include="Projects\App_LocalResources\ReleaseNotes.aspx.zh-CN.resx" />
+    <Content Include="Projects\App_LocalResources\Roadmap.aspx.zh-CN.resx" />
+    <Content Include="Projects\App_LocalResources\ProjectCalendar.aspx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Queries\App_LocalResources\QueryList.aspx.zh-CN.resx" />
+    <Content Include="Queries\App_LocalResources\QueryDetail.aspx.zh-CN.resx" />
+    <Content Include="Errors\App_LocalResources\AccessDenied.aspx.zh-CN.resx" />
+    <Content Include="Errors\App_LocalResources\SomethingMissing.zh-CN.resx" />
+    <Content Include="Errors\App_LocalResources\Error.aspx.zh-CN.resx" />
+    <Content Include="Errors\App_LocalResources\NotFound.aspx.zh-CN.resx" />
+    <Content Include="Errors\App_LocalResources\SessionExpired.aspx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\CategoryTreeView.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\DisplayIssues.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\PickImage.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\PickCategory.ascx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="UserControls\App_LocalResources\PickPriority.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\PickMilestone.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\PickProject.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\PickResolution.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\PickQuery.ascx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="UserControls\App_LocalResources\PickSingleUser.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\PickStatus.ascx.zh-CN.resx" />
+    <Content Include="UserControls\App_LocalResources\PickType.ascx.zh-CN.resx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BugNET.BLL\BugNET.BLL.csproj">
@@ -1599,17 +1664,57 @@
       <Project>{69F2F661-AA9A-4C9F-8217-6A22E8C66FEB}</Project>
       <Name>BugNET.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BugNET.DAL\BugNET.DAL.csproj">
+      <Project>{EFD03A92-584B-4930-9FB1-58DF64BF7FD4}</Project>
+      <Name>BugNET.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BugNET.Entities\BugNET.Entities.csproj">
       <Project>{5A0AE67B-1F8C-4A6D-A02B-B57BB219288F}</Project>
       <Name>BugNET.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugNET.MailboxReader\BugNET.MailboxReader.csproj">
+      <Project>{D10EDECB-ADB2-4E5F-93A6-00D09E86B906}</Project>
+      <Name>BugNET.MailboxReader</Name>
     </ProjectReference>
     <ProjectReference Include="..\BugNET.Services\BugNET.Services.csproj">
       <Project>{171D523B-6F5D-4C45-B415-EC4CC32C4D91}</Project>
       <Name>BugNET.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BugNET.SubversionHooks\BugNET.SubversionHooks.csproj">
+      <Project>{57C3778D-F916-4345-BD77-DFA6F16F0472}</Project>
+      <Name>BugNET.SubversionHooks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugNET.Tests\BugNET.Tests.csproj">
+      <Project>{1D5AA1F7-C62A-4FD6-A85B-1BB60177297A}</Project>
+      <Name>BugNET.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\HttpModules\Authentication\HttpModule.Authentication.csproj">
+      <Project>{72BE8D7E-B026-45EE-8613-DFB1BB70FD02}</Project>
+      <Name>HttpModule.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\HttpModules\Localization\HttpModule.Localization.csproj">
+      <Project>{74376C46-4D55-4891-85D7-06A490FA9FD5}</Project>
+      <Name>HttpModule.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\HttpModules\MailBoxReader\HttpModule.MailBoxReader.csproj">
+      <Project>{4386AA43-F3FC-476D-B7E0-03DB537C88E0}</Project>
+      <Name>HttpModule.MailBoxReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Providers\DataProviders\SqlDataProvider\Provider.SqlDataProvider.csproj">
+      <Project>{DF8C87FA-3398-4AEE-99B0-D47F1831C158}</Project>
+      <Name>Provider.SqlDataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Providers\HtmlEditorProviders\CkHtmlEditorProvider\Provider.CkHtmlEditorProvider.csproj">
+      <Project>{2D1294FE-A204-4F2C-B90C-8A041F44E12A}</Project>
+      <Name>Provider.CkHtmlEditorProvider</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Library\Providers\HtmlEditorProviders\HtmlEditorProvider\Provider.HtmlEditorProvider.csproj">
       <Project>{C7D90E4C-AD95-4ADD-8242-2CD66F0BC89B}</Project>
       <Name>Provider.HtmlEditorProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Providers\HtmlEditorProviders\TextboxHtmlProvider\Provider.TextboxHtmlProvider.csproj">
+      <Project>{CA7E11AB-39FD-490A-A3A1-094BE9C5DB45}</Project>
+      <Name>Provider.TextboxHtmlProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\Library\Providers\MembershipProviders\Provider.MembershipProviders.csproj">
       <Project>{6B8EBBE2-196F-4F79-BC2F-918FC0AF3D67}</Project>

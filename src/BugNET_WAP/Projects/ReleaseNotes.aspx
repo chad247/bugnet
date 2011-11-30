@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Release Notes" Language="C#" meta:resourcekey="Page" MasterPageFile="~/Shared/SingleColumn.master" AutoEventWireup="true" CodeBehind="ReleaseNotes.aspx.cs" Inherits="BugNET.Projects.ReleaseNotes" %>
+﻿<%@ Page Title="Release Notes" Language="C#" meta:resourcekey="Page" MasterPageFile="~/Shared/SingleColumn.master" AutoEventWireup="true" CodeBehind="ReleaseNotes.aspx.cs" Inherits="BugNET.Projects.ReleaseNotes" UICulture="auto" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageTitle" runat="server">
     <h1 class="page-title"><asp:literal id="Literal1" runat="server"   /> - <asp:literal enableviewstate="true" id="litProject" runat="server" /> - <asp:literal enableviewstate="true" id="litMilestone" runat="server" /></h1>
 </asp:Content>

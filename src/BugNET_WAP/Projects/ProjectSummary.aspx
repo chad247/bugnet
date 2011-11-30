@@ -1,4 +1,4 @@
-<%@ Page language="c#" Inherits="BugNET.Projects.ProjectSummary"  MasterPageFile="~/Shared/FourColumn.master" meta:resourcekey="Page" Title="Project Summary" MaintainScrollPositionOnPostback="true" Codebehind="ProjectSummary.aspx.cs" %>
+<%@ Page language="c#" Inherits="BugNET.Projects.ProjectSummary"  MasterPageFile="~/Shared/FourColumn.master" meta:resourcekey="Page" Title="Project Summary" MaintainScrollPositionOnPostback="true" Codebehind="ProjectSummary.aspx.cs"  UICulture="auto" %>
 <%@ Register Src="~/UserControls/CategoryTreeView.ascx" TagName="CategoryTreeView" TagPrefix="uc1" %>
   
     <asp:Content ContentPlaceHolderID="PageTitle" runat="server" ID="content5">

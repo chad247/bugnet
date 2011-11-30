@@ -1,4 +1,4 @@
-<%@ Page language="c#" Inherits="BugNET.Projects.ChangeLog" MasterPageFile="~/Shared/SingleColumn.master" meta:resourcekey="Page" Title="Change Log" Codebehind="ChangeLog.aspx.cs" %>
+<%@ Page language="c#" Inherits="BugNET.Projects.ChangeLog" MasterPageFile="~/Shared/SingleColumn.master" meta:resourcekey="Page" Title="Change Log" Codebehind="ChangeLog.aspx.cs" UICulture="auto" %>
 <%@ Register TagPrefix="it" TagName="TextImage" Src="~/UserControls/TextImage.ascx" %>
 
 <asp:Content ContentPlaceHolderID="Content" ID="content1" runat="server">

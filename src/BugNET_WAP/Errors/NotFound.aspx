@@ -1,4 +1,4 @@
-<%@ Page language="c#" Inherits="BugNET.Errors.NotFound" MasterPageFile="~/Shared/SingleColumn.master"   meta:resourcekey="Page" Title="Resource Not Found" Codebehind="NotFound.aspx.cs" %>
+<%@ Page language="c#" Inherits="BugNET.Errors.NotFound" MasterPageFile="~/Shared/SingleColumn.master"   meta:resourcekey="Page" Title="Resource Not Found" Codebehind="NotFound.aspx.cs" UICulture="auto" %>
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="Content">
 	<div style="padding:5px;">
 	    <h1><asp:Localize runat="server" ID="Localize5" Text="Resource Not Found" meta:resourcekey="TitleLabel" /></h1>

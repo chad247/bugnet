@@ -138,4 +138,7 @@
   <data name="Results.Text" xml:space="preserve">
     <value>Results:</value>
   </data>
+  <data name="EditQueryButton.Text" xml:space="preserve">
+    <value>Edit Query</value>
+  </data>
 </root>

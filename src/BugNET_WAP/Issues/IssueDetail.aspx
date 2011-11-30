@@ -1,6 +1,6 @@
 <%@ Page Language="c#" ValidateRequest="false" Inherits="BugNET.Issues.IssueDetail"
     MasterPageFile="~/Shared/IssueDetail.master" Title=" " CodeBehind="IssueDetail.aspx.cs"
-    AutoEventWireup="True" %>
+    AutoEventWireup="True" UICulture="auto" %>
 
 <%@ Register TagPrefix="it" TagName="DisplayCustomFields" Src="~/UserControls/DisplayCustomFields.ascx" %>
 <%@ Register TagPrefix="it" TagName="PickCategory" Src="~/UserControls/PickCategory.ascx" %>

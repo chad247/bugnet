@@ -118,37 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AlreadyLoggedIn.Text" xml:space="preserve">
-    <value>You are already logged in.</value>
+    <value>你已经登录进系统.</value>
   </data>
   <data name="CreateAccountFailed" xml:space="preserve">
-    <value>: Unsuccessful creation of Account: </value>
+    <value>: 创建账号失败: </value>
   </data>
   <data name="CreateUserLink.Text" xml:space="preserve">
-    <value>click here to get one</value>
+    <value>点击这里注册</value>
   </data>
   <data name="LoginCancelled.Text" xml:space="preserve">
-    <value>Login cancelled</value>
+    <value>取消登录</value>
   </data>
   <data name="LoginFailed.Text" xml:space="preserve">
-    <value>Login failed</value>
+    <value>登录失败</value>
   </data>
   <data name="LoginLabel.Text" xml:space="preserve">
     <value>登录</value>
   </data>
   <data name="LoginMemberAccount.Text" xml:space="preserve">
-    <value>You can login with your member account</value>
+    <value>请用你的账号登录</value>
   </data>
   <data name="LoginOpenIDAccount.Text" xml:space="preserve">
-    <value>You can login using your OpenID</value>
+    <value>也可以使用你的OpenID登录</value>
   </data>
   <data name="NoAccount.Text" xml:space="preserve">
-    <value>If you don&amp;#39;t have an account yet you can</value>
+    <value>如果没有账号,可以</value>
   </data>
   <data name="OpenIDPasswordQuestion" xml:space="preserve">
     <value>This is an OpenID account. What nickname did you supply?</value>
   </data>
   <data name="OR.Text" xml:space="preserve">
-    <value>OR</value>
+    <value>或者</value>
   </data>
   <data name="Page.Title" xml:space="preserve">
     <value>登录</value>
@@ -157,12 +157,12 @@
     <value>: User registration has been disabled by the administrator.</value>
   </data>
   <data name="ShowNormal.Text" xml:space="preserve">
-    <value>Standard Login</value>
+    <value>标准登录</value>
   </data>
   <data name="ShowOpenID.Text" xml:space="preserve">
-    <value>OpenID Login</value>
+    <value>OpenID登录</value>
   </data>
   <data name="NotAuthorized.Text" xml:space="preserve">
-    <value>Account is not authorized or is locked.</value>
+    <value>账号不存在或者已经被锁定</value>
   </data>
 </root>
