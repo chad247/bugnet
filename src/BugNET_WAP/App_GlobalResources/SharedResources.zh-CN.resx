@@ -160,7 +160,7 @@
     <value>克隆项目</value>
   </data>
   <data name="CompletedMilestone" xml:space="preserve">
-    <value>完成的里程碑</value>
+    <value>完成的版本</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>确认密码</value>
@@ -259,7 +259,7 @@
     <value>查看日志</value>
   </data>
   <data name="Milestone" xml:space="preserve">
-    <value>里程碑</value>
+    <value>版本</value>
   </data>
   <data name="Months" xml:space="preserve">
     <value>months</value>
@@ -307,16 +307,16 @@
     <value>查询</value>
   </data>
   <data name="ReleaseDate" xml:space="preserve">
-    <value>Release Date</value>
+    <value>发布日期</value>
   </data>
   <data name="Repository" xml:space="preserve">
     <value>Repository</value>
   </data>
   <data name="Required" xml:space="preserve">
-    <value>Required</value>
+    <value>必须的</value>
   </data>
   <data name="Resolution" xml:space="preserve">
-    <value>Resolution</value>
+    <value>解决方法</value>
   </data>
   <data name="Return" xml:space="preserve">
     <value>返回</value>
@@ -433,6 +433,9 @@
     <value>Total Hours</value>
   </data>
   <data name="Remove" xml:space="preserve">
-    <value>Remove</value>
+    <value>移除</value>
+  </data>
+  <data name="AddProject" xml:space="preserve">
+    <value>创建新项目</value>
   </data>
 </root>

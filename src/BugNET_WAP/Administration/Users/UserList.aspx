@@ -1,4 +1,4 @@
-<%@ Page language="c#" Inherits="BugNET.Administration.Users.UserList" MasterPageFile="~/Shared/SingleColumn.master" Title="User List" Codebehind="UserList.aspx.cs" %>
+<%@ Page language="c#" Inherits="BugNET.Administration.Users.UserList" MasterPageFile="~/Shared/SingleColumn.master" Title="User List" Codebehind="UserList.aspx.cs" UICulture="auto" %>
 <%@ Register Assembly="BugNET" Namespace="BugNET.UserInterfaceLayer.WebControls" TagPrefix="BNWC" %>
 
 <asp:Content ContentPlaceHolderID="content" ID="Content1" runat="server">	

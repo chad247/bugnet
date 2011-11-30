@@ -8,3 +8,14 @@ C:\Projects\bugnet\src\BugNET_WAP\obj\Release\GenerateResource.read.1.tlog
 C:\Projects\bugnet\src\BugNET_WAP\obj\Release\GenerateResource.write.1.tlog
 C:\Projects\bugnet\src\BugNET_WAP\obj\Release\BugNET.dll
 C:\Projects\bugnet\src\BugNET_WAP\obj\Release\BugNET.pdb
+D:\work\BugNet\BugNet\src\build\output\post-commit.bat
+D:\work\BugNet\BugNet\src\build\output\BugNET.XML
+D:\work\BugNet\BugNet\src\build\output\BugNET.dll
+D:\work\BugNet\BugNet\src\build\output\BugNET.pdb
+D:\work\BugNet\BugNet\src\BugNET_WAP\obj\Release\ResolveAssemblyReference.cache
+D:\work\BugNet\BugNet\src\BugNET_WAP\obj\Release\BugNET.Administration.Projects.UserControls.ProjectPriorities.resources
+D:\work\BugNet\BugNet\src\BugNET_WAP\obj\Release\BugNET.Administration.Projects.UserControls.ProjectStatus.resources
+D:\work\BugNet\BugNet\src\BugNET_WAP\obj\Release\GenerateResource.read.1.tlog
+D:\work\BugNet\BugNet\src\BugNET_WAP\obj\Release\GenerateResource.write.1.tlog
+D:\work\BugNet\BugNet\src\BugNET_WAP\obj\Release\BugNET.dll
+D:\work\BugNet\BugNet\src\BugNET_WAP\obj\Release\BugNET.pdb

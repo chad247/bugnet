@@ -1,4 +1,4 @@
-<%@ Page language="c#" Inherits="BugNET.Administration.Projects.EditProject"  ValidateRequest="false" meta:resourcekey="Page" Title="Project Administration" MasterPageFile="~/Shared/TwoColumn.master" Codebehind="EditProject.aspx.cs" %>
+<%@ Page language="c#" Inherits="BugNET.Administration.Projects.EditProject"  ValidateRequest="false" meta:resourcekey="Page" Title="Project Administration" MasterPageFile="~/Shared/TwoColumn.master" Codebehind="EditProject.aspx.cs" UICulture="auto" %>
 
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="PageTitle">
     <h1 class="page-title"><asp:literal ID="EditProjectTitle" runat="Server" meta:resourcekey="EditProjectTitle"  /> - <asp:Literal id="litProjectName" runat="Server"/></h1>

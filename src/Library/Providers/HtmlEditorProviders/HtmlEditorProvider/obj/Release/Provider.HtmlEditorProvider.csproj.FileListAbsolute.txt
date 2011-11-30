@@ -4,3 +4,9 @@ C:\Projects\bugnet\src\build\output\BugNET.Providers.HtmlEditorProviders.pdb
 C:\Projects\bugnet\src\Library\Providers\HtmlEditorProviders\HtmlEditorProvider\obj\Release\ResolveAssemblyReference.cache
 C:\Projects\bugnet\src\Library\Providers\HtmlEditorProviders\HtmlEditorProvider\obj\Release\BugNET.Providers.HtmlEditorProviders.dll
 C:\Projects\bugnet\src\Library\Providers\HtmlEditorProviders\HtmlEditorProvider\obj\Release\BugNET.Providers.HtmlEditorProviders.pdb
+D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.HtmlEditorProviders.XML
+D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.HtmlEditorProviders.dll
+D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.HtmlEditorProviders.pdb
+D:\work\BugNet\BugNet\src\Library\Providers\HtmlEditorProviders\HtmlEditorProvider\obj\Release\ResolveAssemblyReference.cache
+D:\work\BugNet\BugNet\src\Library\Providers\HtmlEditorProviders\HtmlEditorProvider\obj\Release\BugNET.Providers.HtmlEditorProviders.dll
+D:\work\BugNet\BugNet\src\Library\Providers\HtmlEditorProviders\HtmlEditorProvider\obj\Release\BugNET.Providers.HtmlEditorProviders.pdb

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/Shared/SingleColumn.master" AutoEventWireup="true" Inherits="BugNET.Administration.Host.LogViewer" Title="<%$ Resources:LogViewer %>" Codebehind="LogViewer.aspx.cs" %>
+<%@ Page Language="C#" MasterPageFile="~/Shared/SingleColumn.master" AutoEventWireup="true" Inherits="BugNET.Administration.Host.LogViewer" Title="<%$ Resources:LogViewer %>" Codebehind="LogViewer.aspx.cs" UICulture="auto" %>
 <%@ Register Assembly="BugNET" Namespace="BugNET.UserInterfaceLayer.WebControls" TagPrefix="BNWC" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" Runat="Server">

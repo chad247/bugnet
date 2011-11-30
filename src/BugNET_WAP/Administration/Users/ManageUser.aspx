@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Shared/SingleColumn.master" Title="Edit User Account" CodeBehind="ManageUser.aspx.cs" Inherits="BugNET.Administration.Users.ManageUser" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Shared/SingleColumn.master" Title="Edit User Account" CodeBehind="ManageUser.aspx.cs" Inherits="BugNET.Administration.Users.ManageUser" UICulture="auto" %>
 <%@ Register src="UserControls/Membership.ascx" tagname="Membership" tagprefix="BN" %>
 <%@ Register src="UserControls/Roles.ascx" tagname="Roles" tagprefix="BN" %>
 <%@ Register src="UserControls/Profile.ascx" tagname="Profile" tagprefix="BN" %>
