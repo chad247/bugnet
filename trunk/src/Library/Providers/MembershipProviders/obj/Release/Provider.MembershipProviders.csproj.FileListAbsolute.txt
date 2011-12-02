@@ -4,7 +4,6 @@ C:\Projects\bugnet\src\build\output\BugNET.Providers.MembershipProviders.Extende
 C:\Projects\bugnet\src\Library\Providers\MembershipProviders\obj\Release\ResolveAssemblyReference.cache
 C:\Projects\bugnet\src\Library\Providers\MembershipProviders\obj\Release\BugNET.Providers.MembershipProviders.ExtendedSqlMembershipProvider.dll
 C:\Projects\bugnet\src\Library\Providers\MembershipProviders\obj\Release\BugNET.Providers.MembershipProviders.ExtendedSqlMembershipProvider.pdb
-D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.MembershipProviders.ExtendedSqlMembershipProvider.XML
 D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.MembershipProviders.ExtendedSqlMembershipProvider.dll
 D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.MembershipProviders.ExtendedSqlMembershipProvider.pdb
 D:\work\BugNet\BugNet\src\Library\Providers\MembershipProviders\obj\Release\ResolveAssemblyReference.cache

@@ -13,7 +13,6 @@ C:\Projects\bugnet\src\Library\Providers\DataProviders\SqlDataProvider\obj\Relea
 C:\Projects\bugnet\src\build\output\BugNET.Providers.SqlDataProvider.XML
 C:\Projects\bugnet\src\build\output\BugNET.Providers.SqlDataProvider.dll
 C:\Projects\bugnet\src\build\output\BugNET.Providers.SqlDataProvider.pdb
-D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.SqlDataProvider.XML
 D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.SqlDataProvider.dll
 D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.SqlDataProvider.pdb
 D:\work\BugNet\BugNet\src\Library\Providers\DataProviders\SqlDataProvider\obj\Release\ResolveAssemblyReference.cache

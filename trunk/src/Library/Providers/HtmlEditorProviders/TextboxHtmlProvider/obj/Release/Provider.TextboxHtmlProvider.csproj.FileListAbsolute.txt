@@ -4,7 +4,6 @@ C:\Projects\bugnet\src\build\output\BugNET.Providers.TextboxHtmlEditorProvider.p
 C:\Projects\bugnet\src\Library\Providers\HtmlEditorProviders\TextboxHtmlProvider\obj\Release\ResolveAssemblyReference.cache
 C:\Projects\bugnet\src\Library\Providers\HtmlEditorProviders\TextboxHtmlProvider\obj\Release\BugNET.Providers.TextboxHtmlEditorProvider.dll
 C:\Projects\bugnet\src\Library\Providers\HtmlEditorProviders\TextboxHtmlProvider\obj\Release\BugNET.Providers.TextboxHtmlEditorProvider.pdb
-D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.TextboxHtmlEditorProvider.XML
 D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.TextboxHtmlEditorProvider.dll
 D:\work\BugNet\BugNet\src\build\output\BugNET.Providers.TextboxHtmlEditorProvider.pdb
 D:\work\BugNet\BugNet\src\Library\Providers\HtmlEditorProviders\TextboxHtmlProvider\obj\Release\ResolveAssemblyReference.cache

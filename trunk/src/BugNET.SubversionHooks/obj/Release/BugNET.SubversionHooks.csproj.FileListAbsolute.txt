@@ -10,7 +10,6 @@ C:\Projects\bugnet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHook
 C:\Projects\bugnet\src\BugNET.SubversionHooks\obj\Release\BugNET.SubversionHooks.XmlSerializers.dll
 D:\work\BugNet\BugNet\src\build\output\BugNET.SubversionHooks\post-commit.bat
 D:\work\BugNet\BugNet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.exe.config
-D:\work\BugNet\BugNet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.XML
 D:\work\BugNet\BugNet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.exe
 D:\work\BugNet\BugNet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.XmlSerializers.dll
 D:\work\BugNet\BugNet\src\build\output\BugNET.SubversionHooks\BugNET.SubversionHooks.pdb
