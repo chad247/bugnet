@@ -78,17 +78,21 @@ namespace BugNET.Administration.Host.UserControls
                 if (!string.IsNullOrEmpty(HostEmail.Text))
                 {
                     var smtp = new SmtpClient(SMTPServer.Text, int.Parse(SMTPPort.Text))
-                                   {EnableSsl = SMTPUseSSL.Checked};
+                                   {EnableSsl = SMTPUseSSL.Checked,DeliveryMethod=SmtpDeliveryMethod.Network
+                                   };
 
                     if (SMTPEnableAuthentication.Checked)
-                        smtp.Credentials = new NetworkCredential(SMTPUsername.Text, SMTPPassword.Text, SMTPDomain.Text);
+                    {
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = new NetworkCredential(SMTPUsername.Text, SMTPPassword.Text);
+                    }
 
                     var message = new MailMessage(HostEmail.Text, HostEmail.Text,
                                                   string.Format(
                                                       GetLocalResourceObject("EmailConfigurationTestSubject").ToString(),
                                                       HostSettingManager.Get(
-                                                          HostSettingNames.ApplicationTitle)), string.Empty)
-                                      {IsBodyHtml = false};
+                                                          HostSettingNames.ApplicationTitle)), string.Empty) { IsBodyHtml = false };
+                    //var message = new MailMessage(HostEmail.Text, HostEmail.Text, "Test", string.Empty) { IsBodyHtml = false };
 
                     smtp.Send(message);
 

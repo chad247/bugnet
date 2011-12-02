@@ -54,6 +54,7 @@ namespace BugNET.BLL
                 {
                     // this will throw an exception when conversion is not possible
                     val = (T)converter.ConvertFromString(setting);
+                 
                 }
             }
 
