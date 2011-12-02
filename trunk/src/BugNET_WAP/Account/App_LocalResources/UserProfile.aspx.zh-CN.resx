@@ -117,37 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ByAssignee.Text" xml:space="preserve">
-    <value>分配情况</value>
+  <data name="AllProjects.Text" xml:space="preserve">
+    <value>All Projects</value>
   </data>
-  <data name="IssuesByAssignee.Text" xml:space="preserve">
-    <value>Issues by assignee</value>
+  <data name="lblItemPageSize.Text" xml:space="preserve">
+    <value>Issue Page Size:</value>
   </data>
-  <data name="IssuesByCategory.Text" xml:space="preserve">
-    <value>Issues by category</value>
+  <data name="Notifications.Text" xml:space="preserve">
+    <value>Notifications</value>
   </data>
-  <data name="IssuesByMilestone.Text" xml:space="preserve">
-    <value>Issues by milestone</value>
+  <data name="Password.Text" xml:space="preserve">
+    <value>Password</value>
   </data>
-  <data name="IssuesByPriority.Text" xml:space="preserve">
-    <value>Issues by priority</value>
+  <data name="Preferences.Text" xml:space="preserve">
+    <value>Preferences</value>
   </data>
-  <data name="IssuesByStatus.Text" xml:space="preserve">
-    <value>Issues by status</value>
+  <data name="PreferredLocale.Text" xml:space="preserve">
+    <value>Preferred Locale:</value>
   </data>
-  <data name="IssuesByType.Text" xml:space="preserve">
-    <value>Issues by type</value>
+  <data name="ReceiveNotificationsBy.Text" xml:space="preserve">
+    <value>Receive Notifications By:</value>
   </data>
-  <data name="OpenIssues.Text" xml:space="preserve">
-    <value>(未关闭问题)</value>
+  <data name="ReceiveProjectNotifications.Text" xml:space="preserve">
+    <value>Receive Notifications For Projects:</value>
+  </data>
+  <data name="SelectedProjects.Text" xml:space="preserve">
+    <value>Selected Projects</value>
+  </data>
+  <data name="UserDetails.Text" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>Password was changed successfully</value>
+  </data>
+  <data name="PasswordChangeError" xml:space="preserve">
+    <value>Password could not be changed</value>
+  </data>
+  <data name="ProfileSaved" xml:space="preserve">
+    <value>Your profile was updated successfully</value>
+  </data>
+  <data name="ProfileUpdateError" xml:space="preserve">
+    <value>Your profile was could not be updated</value>
   </data>
   <data name="Page.Title" xml:space="preserve">
-    <value>项目汇总</value>
+    <value>Page</value>
   </data>
-  <data name="Unassigned.Text" xml:space="preserve">
-    <value>未分配的</value>
-  </data>
-  <data name="Unscheduled.Text" xml:space="preserve">
-    <value>未安排的</value>
+  <data name="Label111.Text" xml:space="preserve">
+    <value>Enter your new password:</value>
   </data>
 </root>

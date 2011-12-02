@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Shared/SingleColumn.Master" AutoEventWireup="true" CodeBehind="Verify.aspx.cs" Inherits="BugNET.Account.Verify" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Shared/SingleColumn.Master" AutoEventWireup="true" CodeBehind="Verify.aspx.cs" Inherits="BugNET.Account.Verify" UICulture="auto" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="PageTitle" runat="server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Content" runat="server">

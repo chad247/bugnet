@@ -117,37 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ByAssignee.Text" xml:space="preserve">
-    <value>分配情况</value>
+  <data name="InvalidUserAccountID" xml:space="preserve">
+    <value>An invalid user account id was detected</value>
   </data>
-  <data name="IssuesByAssignee.Text" xml:space="preserve">
-    <value>Issues by assignee</value>
+  <data name="UserAccountCouldNotBeFound" xml:space="preserve">
+    <value>The user account could not be found in the membership database.</value>
   </data>
-  <data name="IssuesByCategory.Text" xml:space="preserve">
-    <value>Issues by category</value>
-  </data>
-  <data name="IssuesByMilestone.Text" xml:space="preserve">
-    <value>Issues by milestone</value>
-  </data>
-  <data name="IssuesByPriority.Text" xml:space="preserve">
-    <value>Issues by priority</value>
-  </data>
-  <data name="IssuesByStatus.Text" xml:space="preserve">
-    <value>Issues by status</value>
-  </data>
-  <data name="IssuesByType.Text" xml:space="preserve">
-    <value>Issues by type</value>
-  </data>
-  <data name="OpenIssues.Text" xml:space="preserve">
-    <value>(未关闭问题)</value>
-  </data>
-  <data name="Page.Title" xml:space="preserve">
-    <value>项目汇总</value>
-  </data>
-  <data name="Unassigned.Text" xml:space="preserve">
-    <value>未分配的</value>
-  </data>
-  <data name="Unscheduled.Text" xml:space="preserve">
-    <value>未安排的</value>
+  <data name="LoginLabel.Text" xml:space="preserve">
+    <value>Verify Your Account</value>
   </data>
 </root>

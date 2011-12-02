@@ -101,7 +101,10 @@ namespace BugNET.BLL.Notifications
                         smtp.EnableSsl = smtpUseSSL;
 
                         if (smtpAuthentictation)
-                            smtp.Credentials = new NetworkCredential(smtpUsername, smtpPassword, smtpDomain);
+                        {
+                            smtp.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
+                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        }
 
                         using (var message = new MailMessage(
                             from,
