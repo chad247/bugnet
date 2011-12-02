@@ -1,5 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" MasterPageFile="~/Shared/TwoColumn.master"
-    Title="User Profile" Inherits="BugNET.Account.UserProfile" meta:resourcekey="Page" %>
+    Title="User Profile" Inherits="BugNET.Account.UserProfile" meta:resourcekey="Page" UICulture="auto" %>
 
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="PageTitle">
     <h1 class="page-title">

@@ -1451,6 +1451,13 @@
     <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectResolutions.ascx.zh-CN.resx" />
     <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectRoles.ascx.zh-CN.resx" />
     <Content Include="Administration\Projects\UserControls\App_LocalResources\ProjectStatus.ascx.zh-CN.resx" />
+    <Content Include="Account\App_LocalResources\ForgotPassword.aspx.zh-CN.resx" />
+    <Content Include="Account\App_LocalResources\UserProfile.aspx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Account\App_LocalResources\Verify.aspx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
     <EmbeddedResource Include="Administration\Projects\UserControls\ProjectPriorities.ascx.resx">
       <DependentUpon>ProjectPriorities.ascx.cs</DependentUpon>
       <SubType>Designer</SubType>
