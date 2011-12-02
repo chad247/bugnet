@@ -4,7 +4,6 @@ C:\Projects\bugnet\src\build\output\BugNET.HttpModules.MailBoxReader.pdb
 C:\Projects\bugnet\src\Library\HttpModules\MailBoxReader\obj\Release\ResolveAssemblyReference.cache
 C:\Projects\bugnet\src\Library\HttpModules\MailBoxReader\obj\Release\BugNET.HttpModules.MailBoxReader.dll
 C:\Projects\bugnet\src\Library\HttpModules\MailBoxReader\obj\Release\BugNET.HttpModules.MailBoxReader.pdb
-D:\work\BugNet\BugNet\src\build\output\BugNET.HttpModules.MailBoxReader.XML
 D:\work\BugNet\BugNet\src\build\output\BugNET.HttpModules.MailBoxReader.dll
 D:\work\BugNet\BugNet\src\build\output\BugNET.HttpModules.MailBoxReader.pdb
 D:\work\BugNet\BugNet\src\Library\HttpModules\MailBoxReader\obj\Release\ResolveAssemblyReference.cache
