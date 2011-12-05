@@ -49,7 +49,7 @@ namespace BugNET.Account
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         protected void CreatingUser(object sender, LoginCancelEventArgs e)
         {
-            HIPControl captcha = (HIPControl)CreateUserWizardStep0.ContentTemplateContainer.FindControl("CapchaTest");
+            HIPControl captcha = (HIPControl)CreateUserWizardStep1.ContentTemplateContainer.FindControl("CapchaTest");
 
             if (!captcha.IsValid || !Page.IsValid)
             {
@@ -72,9 +72,9 @@ namespace BugNET.Account
 
             if (user != null)
             {
-                TextBox FirstName = (TextBox)CreateUserWizardStep0.ContentTemplateContainer.FindControl("FirstName");
-                TextBox LastName = (TextBox)CreateUserWizardStep0.ContentTemplateContainer.FindControl("LastName");
-                TextBox FullName = (TextBox)CreateUserWizardStep0.ContentTemplateContainer.FindControl("FullName");
+                TextBox FirstName = (TextBox)CreateUserWizardStep1.ContentTemplateContainer.FindControl("FirstName");
+                TextBox LastName = (TextBox)CreateUserWizardStep1.ContentTemplateContainer.FindControl("LastName");
+                TextBox FullName = (TextBox)CreateUserWizardStep1.ContentTemplateContainer.FindControl("FullName");
 
                 WebProfile Profile = new WebProfile().GetProfile(user.UserName);
 

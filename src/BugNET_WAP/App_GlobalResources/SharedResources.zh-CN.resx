@@ -223,7 +223,7 @@
     <value>完成的</value>
   </data>
   <data name="FirstName" xml:space="preserve">
-    <value>First Name</value>
+    <value>姓</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>首页</value>
@@ -241,10 +241,10 @@
     <value>问题</value>
   </data>
   <data name="IssueType" xml:space="preserve">
-    <value>Issue Type</value>
+    <value>问题类型</value>
   </data>
   <data name="LastName" xml:space="preserve">
-    <value>Last Name</value>
+    <value>名</value>
   </data>
   <data name="LastUpdate" xml:space="preserve">
     <value>Last Update</value>
@@ -331,13 +331,13 @@
     <value>查找</value>
   </data>
   <data name="SecurityAnswer" xml:space="preserve">
-    <value>Security Answer</value>
+    <value>安全问题回答</value>
   </data>
   <data name="SecurityAnswerRequiredErrorMessage" xml:space="preserve">
     <value>Security answer is required.</value>
   </data>
   <data name="SecurityQuestion" xml:space="preserve">
-    <value>Security Question</value>
+    <value>安全问题</value>
   </data>
   <data name="SecurityQuestionRequiredErrorMessage" xml:space="preserve">
     <value>Secruity question is required.</value>

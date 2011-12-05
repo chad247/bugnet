@@ -7,27 +7,18 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace BugNET.Shared {
+namespace BugNET.SvnBrowse {
     
     
-    public partial class SingleColumn {
+    public partial class SubversionShowLog {
         
         /// <summary>
-        /// PageTitle 控件。
+        /// SvnLog 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder PageTitle;
-        
-        /// <summary>
-        /// Content 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Content;
+        protected global::System.Web.UI.WebControls.GridView SvnLog;
     }
 }

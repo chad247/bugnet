@@ -33,7 +33,7 @@ namespace BugNET.Account
                 }
                 else
                 {
-                    if (userInfo.CreationDate.AddDays(7) <= DateTime.Now)
+                    if (userInfo.CreationDate <= DateTime.Now)
                     { 
                         //User is valid, approve them
                         userInfo.IsApproved = true;
