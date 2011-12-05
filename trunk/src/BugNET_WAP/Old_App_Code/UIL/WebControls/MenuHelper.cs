@@ -30,7 +30,8 @@ namespace BugNET.UserInterfaceLayer.WebControls
                 Items.Add(new SuckerMenuItem(string.Format("~/Queries/QueryList.aspx?pid={0}", projectId), Resources.SharedResources.Queries, this));
 
                 if (!string.IsNullOrEmpty(ProjectManager.GetById(projectId).SvnRepositoryUrl))
-                    Items.Add(new SuckerMenuItem(string.Format("~/SvnBrowse/SubversionBrowser.aspx?pid={0}", projectId),Resources.SharedResources.Repository,this));
+                    //Items.Add(new SuckerMenuItem(string.Format("~/SvnBrowse/SubversionBrowser.aspx?pid={0}", projectId),Resources.SharedResources.Repository,this));
+                    Items.Add(new SuckerMenuItem(string.Format("~/SvnBrowse/SubversionShowLog.aspx?pid={0}", projectId), Resources.SharedResources.Repository, this));
 
                 if (HttpContext.Current.User.Identity.IsAuthenticated)
                 {

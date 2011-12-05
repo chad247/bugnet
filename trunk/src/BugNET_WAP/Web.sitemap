@@ -11,7 +11,7 @@
             <siteMapNode url="~/Projects/ProjectCalendar.aspx" title="Calendar" description="Calendar"/>
             <siteMapNode url="~/Projects/Roadmap.aspx" title="Roadmap" description="Roadmap"/>
             <siteMapNode url="~/Projects/ChangeLog.aspx" title="Change Log" description="Change Log" />
-            <siteMapNode url="~/SvnBrowse/SubversionBrowser.aspx" title="Repository" description="Repository" />
+			<siteMapNode url="~/SvnBrowse/SubversionBrowser.aspx" title="Repository" description="Repository" />
         </siteMapNode>
         <siteMapNode url="~/Issues/IssueList.aspx" title="Issues" description="Issues">
             <siteMapNode url="~/Issues/IssueDetail.aspx#" title="New Issue" description="New Issue" />
