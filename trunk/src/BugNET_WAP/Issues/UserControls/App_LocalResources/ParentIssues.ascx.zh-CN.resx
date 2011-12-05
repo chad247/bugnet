@@ -117,97 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AffectedMilestoneLabel.Text" xml:space="preserve">
-    <value>影响的版本:</value>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>添加上级问题</value>
   </data>
-  <data name="AssignedToLabel.Text" xml:space="preserve">
-    <value>分配给:</value>
+  <data name="CompareValidator1.Text" xml:space="preserve">
+    <value>(整数)</value>
   </data>
-  <data name="ByLabel.Text" xml:space="preserve">
-    <value>by</value>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>List all issues on which this issue depends. Enter the ID of the issue in the text box below and click the Add Parent Issue button.</value>
   </data>
-  <data name="CategoryLabel.Text" xml:space="preserve">
-    <value>分类:</value>
+  <data name="RemoveParentIssue" xml:space="preserve">
+    <value>确认想移除这个上级问题吗?</value>
   </data>
-  <data name="Closed" xml:space="preserve">
-    <value>关闭</value>
-  </data>
-  <data name="DateCreatedLabel.Text" xml:space="preserve">
-    <value>Created</value>
-  </data>
-  <data name="DeleteIssue" xml:space="preserve">
-    <value>确认删除这个问题?</value>
-  </data>
-  <data name="DetailsLabel.Text" xml:space="preserve">
-    <value>明细</value>
-  </data>
-  <data name="DueDateLabel.Text" xml:space="preserve">
-    <value>完成日期:</value>
-  </data>
-  <data name="EstimationLabel.Text" xml:space="preserve">
-    <value>预计耗时:</value>
-  </data>
-  <data name="HoursLabel.Text" xml:space="preserve">
-    <value>(小时)</value>
-  </data>
-  <data name="IssueLabel.Text" xml:space="preserve">
-    <value>问题</value>
-  </data>
-  <data name="IssueTitleRequiredErrorMessage" xml:space="preserve">
-    <value>必须输入问题标题</value>
-  </data>
-  <data name="IssueTitleWaterMark" xml:space="preserve">
-    <value>输入问题的标题</value>
-  </data>
-  <data name="IssueTypeLabel.Text" xml:space="preserve">
-    <value>类型:</value>
-  </data>
-  <data name="LastUpdateLabel.Text" xml:space="preserve">
-    <value>Last Updated</value>
-  </data>
-  <data name="LoggedLabel.Text" xml:space="preserve">
-    <value>Logged:</value>
-  </data>
-  <data name="MilestoneLabel.Text" xml:space="preserve">
-    <value>版本:</value>
-  </data>
-  <data name="OwnedByLabel.Text" xml:space="preserve">
-    <value>问题属于:</value>
-  </data>
-  <data name="PageTitleNewIssue" xml:space="preserve">
-    <value>新的问题</value>
-  </data>
-  <data name="PriorityLabel.Text" xml:space="preserve">
-    <value>优先级:</value>
-  </data>
-  <data name="PrivateLabel.Text" xml:space="preserve">
-    <value>私人的:</value>
-  </data>
-  <data name="ResolutionLabel.Text" xml:space="preserve">
-    <value>解决方法:</value>
-  </data>
-  <data name="SaveReturn.Text" xml:space="preserve">
-    <value>保存 &amp;amp; 返回</value>
-  </data>
-  <data name="StatusLabel.Text" xml:space="preserve">
-    <value>状态:</value>
-  </data>
-  <data name="TimeLabel.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="TitleLabel.Text" xml:space="preserve">
-    <value>标题:</value>
-  </data>
-  <data name="Voted" xml:space="preserve">
-    <value>投票</value>
-  </data>
-  <data name="Votes" xml:space="preserve">
-    <value>投票结果</value>
-  </data>
-  <data name="ProgressLabel.Text" xml:space="preserve">
-    <value>完成百分比:</value>
-  </data>
-  <data name="Attachment.Text" xml:space="preserve">
-    <value>附件</value>
+  <data name="NoParentIssues" xml:space="preserve">
+    <value>没有上级问题.</value>
   </data>
 </root>

@@ -11,7 +11,7 @@
     runat="server" ContinueDestinationPageUrl="~/Default.aspx" meta:resourcekey="CreateNewUserWizard"
     OnCreatedUser="CreateUserWizard1_CreatedUser"  >
         <WizardSteps>
-            <asp:CreateUserWizardStep ID="CreateUserWizardStep0"  runat="server">
+            <asp:CreateUserWizardStep ID="CreateUserWizardStep1"  runat="server">
                 <ContentTemplate>
                  <asp:Literal ID="ErrorMessage" runat="server" EnableViewState="False" />
 
@@ -37,7 +37,7 @@
                                     ErrorMessage="<%$ Resources:LastNameRequiredErrorMessage %>" ToolTip="<%$ Resources:LastNameRequiredErrorMessage %>" ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                             </li>
                             <li>
-                                <asp:Label ID="FullNameLabel" runat="server" AssociatedControlID="FullName" meta:resourcekey="FullNameLabel">Display Name:</asp:Label>
+                                <asp:Label ID="FullNameLabel" runat="server" AssociatedControlID="FullName" Text="<%$ Resources:SharedResources,DisplayName %>">">Display Name:</asp:Label>
                                  <asp:TextBox ID="FullName" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="FullNameRequired" runat="server" meta:resourcekey="FullNameRequired" ControlToValidate="FullName"
                                     ErrorMessage="<%$ Resources:FullNameRequiredErrorMessage %>" ToolTip="<%$ Resources:FullNameRequiredErrorMessage %>" ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
@@ -65,7 +65,7 @@
                                     ControlToValidate="Email" ErrorMessage="<%$ Resources:InvalidEmailErrorMessage %>" Text="<%$ Resources:InvalidEmailErrorMessage %>" />
                             </li>
                             <li>
-                                <asp:Label ID="QuestionLabel" runat="server" AssociatedControlID="Question">
+                                <asp:Label ID="QuestionLabel" runat="server" AssociatedControlID="Question" Text="<%$ Resources:SharedResources, SecurityQuestion %>">
                                     Security Question:</asp:Label>
                                 <asp:TextBox ID="Question" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="QuestionRequired" runat="server" ControlToValidate="Question"
@@ -73,7 +73,7 @@
                                     ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                             </li>
                             <li>
-                                <asp:Label ID="AnswerLabel" runat="server" AssociatedControlID="Answer">
+                                <asp:Label ID="AnswerLabel" runat="server" AssociatedControlID="Answer"  Text="<%$ Resources:SharedResources, SecurityAnswer %>">
                                     Security Answer:</asp:Label>
                                   <asp:TextBox ID="Answer" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="AnswerRequired" runat="server" ControlToValidate="Answer"
@@ -92,7 +92,7 @@
                     </div>
                 </ContentTemplate>
             </asp:CreateUserWizardStep>
-           <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server">
+           <asp:CompleteWizardStep ID="CompleteWizardStep2" runat="server">
                 <ContentTemplate>
                     <asp:Panel ID="VerificationPanel" runat="server" Visible="false">
                         <strong><asp:Localize runat="server" ID="Localize1" Text="Thanks for registering with us" meta:resourcekey="VerificationInsructionsTitle" /></strong>
@@ -105,7 +105,11 @@
         <TitleTextStyle Font-Bold="True" HorizontalAlign="Left" Height="50px" Font-Size="18px" />
         <InstructionTextStyle Height="35px" />
     </asp:CreateUserWizard>
+
+    
+
 </asp:Content>
+
 			
 
 

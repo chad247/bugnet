@@ -675,6 +675,13 @@
     <Compile Include="SvnBrowse\SubversionBrowser.aspx.designer.cs">
       <DependentUpon>SubversionBrowser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SvnBrowse\SubversionShowLog.aspx.cs">
+      <DependentUpon>SubversionShowLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SvnBrowse\SubversionShowLog.aspx.designer.cs">
+      <DependentUpon>SubversionShowLog.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HtmlEditor.ascx.cs">
       <DependentUpon>HtmlEditor.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1276,6 +1283,7 @@
     <Content Include="Providers\HtmlEditorProviders\CKEditor\skins\v2\templates.css" />
     <Content Include="Providers\HtmlEditorProviders\CKEditor\themes\default\theme.js" />
     <Content Include="App_Themes\Default\Forms.css" />
+    <Content Include="SvnBrowse\SubversionShowLog.aspx" />
     <Content Include="Templates\Html\IssueAdded.xslt" />
     <Content Include="Templates\Html\IssueUpdated.xslt" />
     <Content Include="Templates\Html\IssueUpdatedWithChanges.xslt" />
@@ -1682,6 +1690,17 @@
     <Content Include="UserControls\App_LocalResources\PickSingleUser.ascx.zh-CN.resx" />
     <Content Include="UserControls\App_LocalResources\PickStatus.ascx.zh-CN.resx" />
     <Content Include="UserControls\App_LocalResources\PickType.ascx.zh-CN.resx" />
+    <Content Include="Issues\UserControls\App_LocalResources\Attachments.ascx.zh-CN.resx" />
+    <Content Include="Issues\UserControls\App_LocalResources\TimeTracking.ascx.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Issues\UserControls\App_LocalResources\History.ascx.zh-CN.resx" />
+    <Content Include="Issues\UserControls\App_LocalResources\IssueTabs.ascx.zh-CN.resx" />
+    <Content Include="Issues\UserControls\App_LocalResources\Notifications.zh-CN.resx" />
+    <Content Include="Issues\UserControls\App_LocalResources\ParentIssues.ascx.zh-CN.resx" />
+    <Content Include="Issues\UserControls\App_LocalResources\RelatedIssues.ascx.zh-CN.resx" />
+    <Content Include="Issues\UserControls\App_LocalResources\Revisions.ascx.zh-CN.resx" />
+    <Content Include="Issues\UserControls\App_LocalResources\SubIssues.ascx.zh-CN.resx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BugNET.BLL\BugNET.BLL.csproj">

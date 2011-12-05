@@ -124,19 +124,19 @@
     <value>邮件地址必须输入.</value>
   </data>
   <data name="FirstNameRequiredErrorMessage" xml:space="preserve">
-    <value>First name is required.</value>
+    <value>姓.</value>
   </data>
   <data name="FullNameRequiredErrorMessage" xml:space="preserve">
-    <value>Full name is required.</value>
+    <value>名.</value>
   </data>
   <data name="InstructionsLabel.Text" xml:space="preserve">
-    <value>Please enter your details and confirm your password to register an account.</value>
+    <value>请输入要注册的用户信息和密码.</value>
   </data>
   <data name="InvalidEmailErrorMessage" xml:space="preserve">
-    <value>Email format is invalid.</value>
+    <value>Email格式不正确.</value>
   </data>
   <data name="LastNameRequiredErrorMessage" xml:space="preserve">
-    <value>Last name is required.</value>
+    <value>需要输入姓名.</value>
   </data>
   <data name="Page.Title" xml:space="preserve">
     <value>注册</value>
@@ -145,21 +145,21 @@
     <value>输入密码.</value>
   </data>
   <data name="SecurityAnswerRequiredErrorMessage" xml:space="preserve">
-    <value>Security answer is required.</value>
+    <value>输入安全问题的答案.</value>
   </data>
   <data name="SecurityQuestionRequiredErrorMessage" xml:space="preserve">
-    <value>Security question is required.</value>
+    <value>输入安全问题.</value>
   </data>
   <data name="UsernameRequiredErrorMessage" xml:space="preserve">
     <value>输入用户名.</value>
   </data>
   <data name="VerificationInsructions.Text" xml:space="preserve">
-    <value>Now wait for an email to be sent to the email address you specified with instructions to enable your account and login.</value>
+    <value>请检查邮箱接收注册邮件,并通过给定的链接激活此账号.</value>
   </data>
   <data name="VerificationInsructionsTitle.Text" xml:space="preserve">
     <value>感谢注册.</value>
   </data>
   <data name="TitleLabel.Text" xml:space="preserve">
-    <value>Sign up for your new account</value>
+    <value>注册新账号</value>
   </data>
 </root>

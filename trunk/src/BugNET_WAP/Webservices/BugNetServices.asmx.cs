@@ -32,7 +32,7 @@ namespace BugNET.Webservices
         /// <param name="revisionDate">The revision date.</param>
         /// <param name="revisionMessage">The revision message.</param>
         /// <returns>The new id of the revision</returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public bool CreateNewIssueRevision(int revision, int issueId, string repository, string revisionAuthor, string revisionDate, string revisionMessage)
         {
@@ -64,7 +64,7 @@ namespace BugNET.Webservices
         /// <param name="size">The size.</param>
         /// <param name="description">The description.</param>
         /// <returns></returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public bool CreateNewIssueAttachment(int issueId, string creatorUserName, string fileName, string contentType, byte[] attachment, int size, string description)
         {
@@ -99,7 +99,7 @@ namespace BugNET.Webservices
         /// </summary>
         /// <param name="categoryId">The category id.</param>
         /// <param name="name">The name.</param>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod]
         public void RenameCategory(string categoryId, string name)
         {
@@ -131,7 +131,7 @@ namespace BugNET.Webservices
         /// <param name="categoryId">The category id.</param>
         /// <param name="oldParentId">The old parent id.</param>
         /// <param name="newParentId">The new parent id.</param>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod]
         public void MoveCategory(string categoryId, string oldParentId, string newParentId)
         {          
@@ -228,7 +228,7 @@ namespace BugNET.Webservices
         /// <param name="name">The name.</param>
         /// <param name="parentCategoryId">The parent Category id.</param>
         /// <returns>Id value of the created Category</returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public int AddCategory(string projectId, string name, string parentCategoryId)
         {  
@@ -256,7 +256,7 @@ namespace BugNET.Webservices
         /// Deletes the Category.
         /// </summary>
         /// <param name="categoryId">The category id.</param>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public void DeleteCategory(string categoryId)
         {
@@ -305,7 +305,7 @@ namespace BugNET.Webservices
         /// </summary>
         /// <param name="ProjectId">id of project</param>
         /// <returns>Array of resolutionnames</returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public String[] GetResolutions(int ProjectId)
         {
@@ -326,7 +326,7 @@ namespace BugNET.Webservices
         /// </summary>
         /// <param name="ProjectId">project id</param>
         /// <returns>Array of all milestone names</returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public String[] GetMilestones(int ProjectId)
         {
@@ -348,7 +348,7 @@ namespace BugNET.Webservices
         /// </summary>
         /// <param name="ProjectId">project id</param>
         /// <returns>Array of all issue type names</returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public String[] GetIssueTypes(int ProjectId)
         {
@@ -369,7 +369,7 @@ namespace BugNET.Webservices
         /// </summary>
         /// <param name="ProjectId">project id</param>
         /// <returns>Array of all priority names</returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public String[] GetPriorities(int ProjectId)
         {
@@ -412,7 +412,7 @@ namespace BugNET.Webservices
         /// </summary>
         /// <param name="ProjectId">project id</param>
         /// <returns>Array of all status names</returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public String[] GetStatus(int ProjectId)
         {
@@ -434,7 +434,7 @@ namespace BugNET.Webservices
         /// </summary>
         /// <param name="ProjectCode">Named ProjectCode</param>
         /// <returns>Project ID</returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public int GetProjectId(string ProjectCode)
         {
@@ -451,7 +451,7 @@ namespace BugNET.Webservices
         /// <param name="ProjectId">The project id.</param>
         /// <param name="Filter">The filter.</param>
         /// <returns></returns>
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
+        [PrincipalPermission(SecurityAction.Assert, Authenticated = true)]
         [WebMethod(EnableSession = true)]
         public object[] GetProjectIssues(int ProjectId, string Filter)
         {
