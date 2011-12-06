@@ -26,11 +26,14 @@ namespace BugNET.SvnBrowse
             {                
                 DataColumn column;
                 string svnUrl = "";
+                
                 if (Request.QueryString["pid"] != null)
                 {
                     ProjectId = Convert.ToInt32(Request.QueryString["pid"]);
                     Project proj = ProjectManager.GetById(ProjectId);
-                    svnUrl = proj.SvnRepositoryUrl;                   
+                    svnUrl = proj.SvnRepositoryUrl;  
+                    //在线程中保存svn地址
+                    Session.Add("SvnUrl", svnUrl);
                 }             
 
                 dt = new DataTable("Log");

@@ -4,12 +4,14 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using BugNET.BLL;
 using BugNET.Entities;
+using System.Collections.Generic;
 
 
 namespace BugNET.SvnBrowse
 {
     public partial class SubversionChangeDetail : BugNET.UserInterfaceLayer.BasePage
     {
+        private static Dictionary<int, string> errors = new Dictionary<int, string>();
         DataTable dt;
         private string singleLog = "";
 
@@ -18,13 +20,10 @@ namespace BugNET.SvnBrowse
             if (!IsPostBack)
             {
                 DataColumn column;
-                string svnUrl = "";
-                if (Request.QueryString["pid"] != null)
-                {
-                    ProjectId = Convert.ToInt32(Request.QueryString["pid"]);
-                    Project proj = ProjectManager.GetById(ProjectId);
-                    svnUrl = proj.SvnRepositoryUrl;
-                }
+                string svnUrl = "",rev = "";
+                if (Request.QueryString["id"] == null) return;
+                rev = Request.QueryString["id"] ;
+                svnUrl = Session["SvnUrl"].ToString();                
 
                 dt = new DataTable("Log");
 
@@ -36,7 +35,7 @@ namespace BugNET.SvnBrowse
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
-                column.ColumnName = "Log";
+                column.ColumnName = "Change";
                 column.ReadOnly = true;
 
                 dt.Columns.Add(column);
@@ -55,17 +54,20 @@ namespace BugNET.SvnBrowse
 
                 dt.Columns.Add(column);
 
-                SvnReadLog(svnUrl);
+                string command = "svn";
+                string args = string.Format("--username {0} --password {1} --non-interactive --trust-server-cert log {2} -v -r {3}", "admin", "jinyaoshi", svnUrl,rev);
 
-                SvnLog.DataSource = dt;
-                SvnLog.DataBind();
+                SvnReadLog(command,args);
+
+                BindData();
+                //SvnLog.DataSource = dt;
+                //SvnLog.DataBind();
             }
         }
 
-        protected void SvnReadLog(string svnUrl)
-        {
-            string command = "svn";
-            string args = string.Format("--username {0} --password {1} --non-interactive --trust-server-cert log {2}", "admin", "jinyaoshi", svnUrl);
+        protected void SvnReadLog(string command,string args)
+        {            
+            //string args = string.Format("--username {0} --password {1} --non-interactive --trust-server-cert log {2}", "admin", "jinyaoshi", svnUrl);
             //string command = "cmd";
             //string args = "dir";          
 
@@ -104,7 +106,7 @@ namespace BugNET.SvnBrowse
                 if (s.IndexOf("------") == 0)
                 {
                     if (string.IsNullOrEmpty(singleLog)) return;
-                    var lines = singleLog.Split(new char[] { '|', '\r' });
+                    var lines = singleLog.Split(new char[] { '|', '\n' });
 
                     if (lines.Length == 5)
                     {
@@ -113,7 +115,7 @@ namespace BugNET.SvnBrowse
                         //dr["date"] = DateTime.Parse(lines[1].Substring(0,lines[1].IndexOf('(') - 1));
                         dr["user"] = lines[1];
                         dr["date"] = DateTime.Parse(lines[2].Substring(0, lines[2].IndexOf('(') - 1));
-                        dr["log"] = lines[4];
+                        dr["change"] = lines[4];
 
                         dt.Rows.Add(dr);
                     }
@@ -215,6 +217,16 @@ namespace BugNET.SvnBrowse
                 }
             }
             catch { }
+        }
+
+        protected void BindData()
+        {
+            if (dt.Rows.Count == 0) return;
+            DataRow dr = dt.Rows[0];
+            User.Text = dr["user"].ToString();
+            Date.Text = dr["date"].ToString();
+            Change.Text = dr["change"].ToString();
+            //Log.Text = dr["log"].ToString();
         }
 
     }

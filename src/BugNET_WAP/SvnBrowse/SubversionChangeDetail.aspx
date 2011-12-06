@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
     
-<div id="DivTabs1" 
+    <div id="DivTabs1" 
         style="border-left: 1px solid #3183C6; border-right: 1px solid #3183C6; border-top: 1px none #3183C6; border-bottom: 1px solid #3183C6; height:319px; background-color: White;"  
         align="left">    
    <table style="width: 100%; height: 100%" > 
@@ -53,8 +53,8 @@
         </td>
        </tr>
        <tr>
-        <td style="height:150px" valign="top">
-            <asp:Label ID="Change" runat="server" Text="Modified Files" ></asp:Label>
+        <td style="height:150px" valign="top">            
+            <asp:Label ID="Change" runat="server" Text="Label" Width="100%"></asp:Label>
         </td>
        </tr>
     </table>   
