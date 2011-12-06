@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using System.Data;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using System.IO;
 using BugNET.BLL;
 using BugNET.Entities;
-using System.Collections.Generic;
 
 
 namespace BugNET.SvnBrowse
@@ -49,7 +54,14 @@ namespace BugNET.SvnBrowse
 
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
-                column.ColumnName = "User";
+                column.ColumnName = "User";                
+                column.ReadOnly = true;
+
+                dt.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "Log";
                 column.ReadOnly = true;
 
                 dt.Columns.Add(column);
@@ -58,10 +70,9 @@ namespace BugNET.SvnBrowse
                 string args = string.Format("--username {0} --password {1} --non-interactive --trust-server-cert log {2} -v -r {3}", "admin", "jinyaoshi", svnUrl,rev);
 
                 SvnReadLog(command,args);
-
-                BindData();
-                //SvnLog.DataSource = dt;
-                //SvnLog.DataBind();
+                
+                ChangeView.DataSource = dt;
+                ChangeView.DataBind();
             }
         }
 
@@ -106,7 +117,7 @@ namespace BugNET.SvnBrowse
                 if (s.IndexOf("------") == 0)
                 {
                     if (string.IsNullOrEmpty(singleLog)) return;
-                    var lines = singleLog.Split(new char[] { '|', '\n' });
+                    var lines = singleLog.Split(new char[] { '|' });
 
                     if (lines.Length == 5)
                     {
@@ -116,6 +127,7 @@ namespace BugNET.SvnBrowse
                         dr["user"] = lines[1];
                         dr["date"] = DateTime.Parse(lines[2].Substring(0, lines[2].IndexOf('(') - 1));
                         dr["change"] = lines[4];
+                        dr["log"] = "";
 
                         dt.Rows.Add(dr);
                     }
@@ -123,10 +135,10 @@ namespace BugNET.SvnBrowse
                 }
                 else
                 {
-                    char t = ' ';
+                    char t = '\r';
                     if (singleLog == "") t = '|';
 
-                    singleLog += e.Data + t;
+                    singleLog += e.Data + t + "<br />";
                 }
 
             }
@@ -218,16 +230,7 @@ namespace BugNET.SvnBrowse
             }
             catch { }
         }
-
-        protected void BindData()
-        {
-            if (dt.Rows.Count == 0) return;
-            DataRow dr = dt.Rows[0];
-            User.Text = dr["user"].ToString();
-            Date.Text = dr["date"].ToString();
-            Change.Text = dr["change"].ToString();
-            //Log.Text = dr["log"].ToString();
-        }
+       
 
     }
 }
