@@ -675,6 +675,13 @@
     <Compile Include="SvnBrowse\SubversionBrowser.aspx.designer.cs">
       <DependentUpon>SubversionBrowser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SvnBrowse\SubversionChangeDetail.aspx.cs">
+      <DependentUpon>SubversionChangeDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SvnBrowse\SubversionChangeDetail.aspx.designer.cs">
+      <DependentUpon>SubversionChangeDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SvnBrowse\SubversionShowLog.aspx.cs">
       <DependentUpon>SubversionShowLog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1283,6 +1290,7 @@
     <Content Include="Providers\HtmlEditorProviders\CKEditor\skins\v2\templates.css" />
     <Content Include="Providers\HtmlEditorProviders\CKEditor\themes\default\theme.js" />
     <Content Include="App_Themes\Default\Forms.css" />
+    <Content Include="SvnBrowse\SubversionChangeDetail.aspx" />
     <Content Include="SvnBrowse\SubversionShowLog.aspx" />
     <Content Include="Templates\Html\IssueAdded.xslt" />
     <Content Include="Templates\Html\IssueUpdated.xslt" />

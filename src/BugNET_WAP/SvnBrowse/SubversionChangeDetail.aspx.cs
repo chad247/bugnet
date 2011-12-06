@@ -1,37 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
-using System.IO;
 using BugNET.BLL;
 using BugNET.Entities;
 
+
 namespace BugNET.SvnBrowse
 {
-    public partial class SubversionShowLog : BugNET.UserInterfaceLayer.BasePage
+    public partial class SubversionChangeDetail : BugNET.UserInterfaceLayer.BasePage
     {
-        private static Dictionary<int, string> errors = new Dictionary<int, string>();
-      
-        DataTable dt ;       
-        private string  singleLog = "";
+        DataTable dt;
+        private string singleLog = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {                
+            {
                 DataColumn column;
                 string svnUrl = "";
                 if (Request.QueryString["pid"] != null)
                 {
                     ProjectId = Convert.ToInt32(Request.QueryString["pid"]);
                     Project proj = ProjectManager.GetById(ProjectId);
-                    svnUrl = proj.SvnRepositoryUrl;                   
-                }             
+                    svnUrl = proj.SvnRepositoryUrl;
+                }
 
                 dt = new DataTable("Log");
 
@@ -63,7 +56,7 @@ namespace BugNET.SvnBrowse
                 dt.Columns.Add(column);
 
                 SvnReadLog(svnUrl);
-                
+
                 SvnLog.DataSource = dt;
                 SvnLog.DataBind();
             }
@@ -83,7 +76,7 @@ namespace BugNET.SvnBrowse
             startInfo.UseShellExecute = false;
             startInfo.RedirectStandardOutput = true;
             //startInfo.RedirectStandardError = true;
-            
+
 
             try
             {
@@ -97,7 +90,7 @@ namespace BugNET.SvnBrowse
                 throw new ApplicationException(ex.Message);
             }
 
-            proc.BeginOutputReadLine();   
+            proc.BeginOutputReadLine();
 
             proc.WaitForExit();
         }
@@ -111,7 +104,7 @@ namespace BugNET.SvnBrowse
                 if (s.IndexOf("------") == 0)
                 {
                     if (string.IsNullOrEmpty(singleLog)) return;
-                    var lines = singleLog.Split(new char[]{'|','\r'});
+                    var lines = singleLog.Split(new char[] { '|', '\r' });
 
                     if (lines.Length == 5)
                     {
@@ -129,8 +122,8 @@ namespace BugNET.SvnBrowse
                 else
                 {
                     char t = ' ';
-                    if (singleLog =="") t = '|';
-                    
+                    if (singleLog == "") t = '|';
+
                     singleLog += e.Data + t;
                 }
 
@@ -153,7 +146,7 @@ namespace BugNET.SvnBrowse
                 startInfo.RedirectStandardOutput = true;
                 startInfo.RedirectStandardError = true;
 
-                
+
                 proc = new Process();
                 proc.StartInfo = startInfo;
                 proc.ErrorDataReceived += new DataReceivedEventHandler(CommandProcess_ErrorDataReceived);
@@ -161,7 +154,7 @@ namespace BugNET.SvnBrowse
 
                 proc.BeginErrorReadLine();
 
-                string retVal = proc.StandardOutput.ReadToEnd();                
+                string retVal = proc.StandardOutput.ReadToEnd();
 
                 if (!proc.WaitForExit(killAfterSeconds * 1000))
                     proc.Kill();
