@@ -19,11 +19,12 @@ namespace BugNET.SvnBrowse
       
         DataTable dt ;       
         private string  singleLog = "";
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {                
+            {
+                
                 DataColumn column;
                 string svnUrl = "";
                 
@@ -31,9 +32,7 @@ namespace BugNET.SvnBrowse
                 {
                     ProjectId = Convert.ToInt32(Request.QueryString["pid"]);
                     Project proj = ProjectManager.GetById(ProjectId);
-                    svnUrl = proj.SvnRepositoryUrl;  
-                    //在线程中保存svn地址
-                    Session.Add("SvnUrl", svnUrl);
+                    svnUrl = proj.SvnRepositoryUrl;                     
                 }             
 
                 dt = new DataTable("Log");
@@ -61,6 +60,13 @@ namespace BugNET.SvnBrowse
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "User";
+                column.ReadOnly = true;
+
+                dt.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.Int32");
+                column.ColumnName = "pid";
                 column.ReadOnly = true;
 
                 dt.Columns.Add(column);
@@ -107,37 +113,36 @@ namespace BugNET.SvnBrowse
 
         void proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(e.Data))
+            string s = e.Data;
+            if (string.IsNullOrEmpty(e.Data)) s = "";
+
+            if (s.IndexOf("------") == 0)
             {
-                string s = e.Data;
+                if (string.IsNullOrEmpty(singleLog)) return;
+                var lines = singleLog.Split(new char[] { '|', '\r' });
 
-                if (s.IndexOf("------") == 0)
+                if (lines.Length == 5)
                 {
-                    if (string.IsNullOrEmpty(singleLog)) return;
-                    var lines = singleLog.Split(new char[]{'|','\r'});
-
-                    if (lines.Length == 5)
-                    {
-                        DataRow dr = dt.NewRow();
-                        dr["rev"] = lines[0];
-                        //dr["date"] = DateTime.Parse(lines[1].Substring(0,lines[1].IndexOf('(') - 1));
-                        dr["user"] = lines[1];
-                        dr["date"] = DateTime.Parse(lines[2].Substring(0, lines[2].IndexOf('(') - 1));
-                        dr["log"] = lines[4];
-
-                        dt.Rows.Add(dr);
-                    }
-                    singleLog = "";
+                    DataRow dr = dt.NewRow();
+                    dr["rev"] = lines[0];
+                    //dr["date"] = DateTime.Parse(lines[1].Substring(0,lines[1].IndexOf('(') - 1));
+                    dr["user"] = lines[1];
+                    dr["date"] = DateTime.Parse(lines[2].Substring(0, lines[2].IndexOf('(') - 1));
+                    dr["log"] = string.IsNullOrEmpty(lines[4].Trim()) ? "[No Message]" : lines[4];
+                    dr["pid"] = ProjectId;
+                    dt.Rows.Add(dr);
                 }
-                else
-                {
-                    char t = ' ';
-                    if (singleLog =="") t = '|';
-                    
-                    singleLog += e.Data + t;
-                }
-
+                singleLog = "";
             }
+            else
+            {
+                char t = ' ';
+                if (singleLog == "") t = '|';
+
+                singleLog += s + t;
+            }
+
+            
         }
 
         public static string RunCommand(string command, string args, int killAfterSeconds, bool echoCommand)

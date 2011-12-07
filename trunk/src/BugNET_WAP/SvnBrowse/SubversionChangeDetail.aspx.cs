@@ -23,12 +23,18 @@ namespace BugNET.SvnBrowse
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {
+            {                
                 DataColumn column;
                 string svnUrl = "",rev = "";
+                if (Request.QueryString["pid"] != null)
+                {
+                    ProjectId = Convert.ToInt32(Request.QueryString["pid"]);
+                    Project proj = ProjectManager.GetById(ProjectId);
+                    svnUrl = proj.SvnRepositoryUrl;
+                }
+                else return;             
                 if (Request.QueryString["id"] == null) return;
-                rev = Request.QueryString["id"] ;
-                svnUrl = Session["SvnUrl"].ToString();                
+                rev = Request.QueryString["id"] ;                             
 
                 dt = new DataTable("Log");
 
@@ -95,7 +101,7 @@ namespace BugNET.SvnBrowse
             {
                 proc = new Process();
                 proc.StartInfo = startInfo;
-                proc.OutputDataReceived += new DataReceivedEventHandler(proc_OutputDataReceived);
+                //proc.OutputDataReceived += new DataReceivedEventHandler(proc_OutputDataReceived);
                 proc.Start();
             }
             catch (Exception ex)
@@ -103,45 +109,61 @@ namespace BugNET.SvnBrowse
                 throw new ApplicationException(ex.Message);
             }
 
-            proc.BeginOutputReadLine();
+            singleLog = proc.StandardOutput.ReadToEnd();
+            //proc.BeginOutputReadLine();
 
             proc.WaitForExit();
+
+            SvnChangeLog();
+        }
+
+        protected void SvnChangeLog()
+        {
+            if (singleLog.Length < 0) return;
+            singleLog = singleLog.Substring(singleLog.IndexOf("--------\r\n") + 10, singleLog.IndexOf("\r\n--------") - singleLog.IndexOf("--------\r\n") - 10);
+            var lines = singleLog.Split(new char[] { '|'});
+            DataRow dr = dt.NewRow();
+            dr["rev"] = lines[0];
+            dr["user"] = lines[1];
+            dr["date"] = DateTime.Parse(lines[2].Substring(0, lines[2].IndexOf('(') - 1));
+            string s = lines[3];
+            dr["change"] = s.Substring(s.IndexOf("\r\n") + 2, s.IndexOf("\r\n\r\n", s.IndexOf("\r\n")) - s.IndexOf("\r\n") - 2);
+            dr["log"] = s.Substring(s.IndexOf("\r\n\r\n") + 4);
+
+            dt.Rows.Add(dr);
         }
 
         void proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(e.Data))
+        {          
+            string s = e.Data;
+            if (string.IsNullOrEmpty(s)) s = "|" ;
+            if (s.IndexOf("------") == 0)
             {
-                string s = e.Data;
+                if (string.IsNullOrEmpty(singleLog)) return;
+                var lines = singleLog.Split(new char[] { '|' });
 
-                if (s.IndexOf("------") == 0)
+                if (lines.Length == 5)
                 {
-                    if (string.IsNullOrEmpty(singleLog)) return;
-                    var lines = singleLog.Split(new char[] { '|' });
+                    DataRow dr = dt.NewRow();
+                    dr["rev"] = lines[0];
+                    //dr["date"] = DateTime.Parse(lines[1].Substring(0,lines[1].IndexOf('(') - 1));
+                    dr["user"] = lines[1];
+                    dr["date"] = DateTime.Parse(lines[2].Substring(0, lines[2].IndexOf('(') - 1));
+                    dr["change"] = lines[4];
+                    dr["log"] = "";
 
-                    if (lines.Length == 5)
-                    {
-                        DataRow dr = dt.NewRow();
-                        dr["rev"] = lines[0];
-                        //dr["date"] = DateTime.Parse(lines[1].Substring(0,lines[1].IndexOf('(') - 1));
-                        dr["user"] = lines[1];
-                        dr["date"] = DateTime.Parse(lines[2].Substring(0, lines[2].IndexOf('(') - 1));
-                        dr["change"] = lines[4];
-                        dr["log"] = "";
-
-                        dt.Rows.Add(dr);
-                    }
-                    singleLog = "";
+                    dt.Rows.Add(dr);
                 }
-                else
-                {
-                    char t = '\r';
-                    if (singleLog == "") t = '|';
-
-                    singleLog += e.Data + t + "<br />";
-                }
-
+                singleLog = "";
             }
+            else
+            {
+                char t = ' ';
+                if (singleLog == "") t = '|';
+
+                singleLog += s + t + Environment.NewLine;
+            }
+           
         }
 
         public static string RunCommand(string command, string args, int killAfterSeconds, bool echoCommand)
