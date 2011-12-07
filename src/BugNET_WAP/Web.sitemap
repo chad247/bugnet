@@ -13,6 +13,8 @@
             <siteMapNode url="~/Projects/ChangeLog.aspx" title="Change Log" description="Change Log" />
 			<!--><siteMapNode url="~/SvnBrowse/SubversionBrowser.aspx" title="Repository" description="Repository" />-->
 			<siteMapNode url="~/SvnBrowse/SubversionShowLog.aspx" title="Repository" description="Repository" />
+			<siteMapNode url="~/SvnBrowse/SubversionChangeDetail.aspx" title="Affected files" description="Affected files" />
+			
         </siteMapNode>
         <siteMapNode url="~/Issues/IssueList.aspx" title="Issues" description="Issues">
             <siteMapNode url="~/Issues/IssueDetail.aspx#" title="New Issue" description="New Issue" />
