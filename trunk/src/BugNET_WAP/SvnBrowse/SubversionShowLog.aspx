@@ -8,7 +8,10 @@
 <div>
       <asp:GridView ID="SvnLog" runat="server"
     AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" 
-           >
+          AllowPaging="True" PageSize="10" 
+          OnPageIndexChanged="SvnLog_PageIndexChanged" OnPageIndexChanging="SvnLog_PageIndexChanging"
+         PagerSettings-Mode="NextPrevious" 
+          >
           <AlternatingRowStyle BackColor="White" />
     
     <Columns>    
@@ -43,6 +46,9 @@
           <EditRowStyle BackColor="#7C6F57" />
           <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
           <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+
+<PagerSettings Mode="NumericFirstLast"></PagerSettings>
+
           <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
           <RowStyle BackColor="#E3EAEB" />
           <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
