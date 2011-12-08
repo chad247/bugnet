@@ -7,17 +7,16 @@
 
     <div >     
         <asp:DetailsView ID="ChangeView" runat="server" AutoGenerateRows="False" 
-            Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
-            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True" />
-            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-            <RowStyle BackColor="#E3EAEB" />
-            <AlternatingRowStyle BackColor="White" />    
-            <CommandRowStyle BackColor="#C5BBAF" Font-Bold="True" />
-            <EditRowStyle BackColor="#7C6F57" />
-            <FieldHeaderStyle BackColor="#D0D0D0" Font-Bold="True" />
+            Width="100%" CellPadding="3" GridLines="Horizontal" BackColor="White" 
+            BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px">
+            <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+        <HeaderStyle BackColor="#4A3C8C" ForeColor="#F7F7F7" Font-Bold="True" />
+            <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+            <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+            <AlternatingRowStyle BackColor="#F7F7F7" />    
+            <EditRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
         <Fields>
-              <asp:BoundField DataField="Rev" HeaderText="Rev" ReadOnly="True" />
+              <asp:BoundField DataField="Rev" HeaderText="Rev" ReadOnly="True" HeaderStyle-Width="80" />
               <asp:BoundField DataField="User" HeaderText="User"   ReadOnly="True" />
               <asp:BoundField DataField="Date" HeaderText="Date"  ReadOnly="True" />
              <asp:TemplateField HeaderText="Log">                       
