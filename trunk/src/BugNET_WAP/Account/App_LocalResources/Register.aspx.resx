@@ -162,4 +162,10 @@
   <data name="TitleLabel.Text" xml:space="preserve">
     <value>Sign up for your new account</value>
   </data>
+  <data name="CapchaTestLabel.Text" xml:space="preserve">
+    <value>Enter the code</value>
+  </data>
+  <data name="CapchaTestValidErrorMessage" xml:space="preserve">
+    <value>Code error!</value>
+  </data>
 </root>

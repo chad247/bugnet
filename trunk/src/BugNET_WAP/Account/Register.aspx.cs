@@ -53,7 +53,6 @@ namespace BugNET.Account
 
             if (!captcha.IsValid || !Page.IsValid)
             {
-
                 e.Cancel = true;
             }
         }
@@ -99,6 +98,12 @@ namespace BugNET.Account
                 //send notification this user was created
                 UserManager.SendUserRegisteredNotification(user.UserName);
             }
+        }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            HIPControl captcha = (HIPControl)CreateUserWizardStep1.ContentTemplateContainer.FindControl("CapchaTest");
+            args.IsValid = captcha.IsValid;
         }
 
 

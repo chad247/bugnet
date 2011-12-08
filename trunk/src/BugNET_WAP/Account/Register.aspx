@@ -1,11 +1,8 @@
-<%@ Page language="c#" Inherits="BugNET.Account.Register" MasterPageFile="~/Shared/SingleColumn.master" Title="Register" Codebehind="Register.aspx.cs" meta:resourcekey="Page" UICulture="auto" %>
+<%@ Page language="c#" Inherits="BugNET.Account.Register" MasterPageFile="~/Shared/SingleColumn.master" Title="Register" Codebehind="Register.aspx.cs" meta:resourcekey="Page" UICulture="auto"   %>
 <%@ Register TagPrefix="cc2" Namespace="Clearscreen.SharpHIP" Assembly="Clearscreen.SharpHIP" %>
 
 <asp:Content runat="server" ID="Content1" ContentPlaceHolderID="Content">
     
-    <h1><asp:Label ID="TitleLabel" meta:resourcekey="TitleLabel" style="color: #666" runat="server" Text="Sign up for your new account"></asp:Label></h1>
-    <p style="margin-top:10px;"><asp:Label ID="InstructionsLabel" runat="server"  
-        meta:resourcekey="InstructionsLabel" Text="Please enter your details and confirm your password to register an account."></asp:Label></p>
     <asp:ValidationSummary ID="ValidationSummary1" runat="server"  ValidationGroup="CreateUserWizard1" HeaderText="<%$ Resources:SharedResources, ValidationSummaryHeaderText %>" DisplayMode="BulletList"  CssClass="validationSummary"/>
     <asp:CreateUserWizard ID="CreateUserWizard1"  OnCreatingUser="CreatingUser" Width="600px"
     runat="server" ContinueDestinationPageUrl="~/Default.aspx" meta:resourcekey="CreateNewUserWizard"
@@ -13,9 +10,15 @@
         <WizardSteps>
             <asp:CreateUserWizardStep ID="CreateUserWizardStep1"  runat="server">
                 <ContentTemplate>
+                 <h1><asp:Label ID="TitleLabel" meta:resourcekey="TitleLabel" style="color: #666" runat="server" Text="Sign up for your new account"></asp:Label></h1>
+                <p style="margin-top:10px;">
+                <asp:Label ID="InstructionsLabel" runat="server"  
+                    meta:resourcekey="InstructionsLabel" Text="Please enter your details and confirm your password to register an account.">
+                     </asp:Label></p>
                  <asp:Literal ID="ErrorMessage" runat="server" EnableViewState="False" />
-
+                 
                     <div class="fieldgroup">
+
                         <ol>
                             <li>
                               <asp:Label ID="UserNameLabel" runat="server"  
@@ -84,9 +87,14 @@
                                     ValidationGroup="CreateUserWizard1">*</asp:CompareValidator>
                             </li>
                             <li>
-                               <cc2:hipcontrol id="CapchaTest" runat="server" 
+                                <asp:Label ID="CapchaTestLabel" runat="server" AssociatedControlID="CapchaTest" meta:resourcekey="CapchaTestLabel" Text="Enter the code"></asp:Label>
+                              
+                               <cc2:hipcontrol id="CapchaTest" runat="server"  ValidationIgnoreCase="true" 
                                    TrustAuthenticatedUsers="False" AutoRedirect="False"  ImageWidth="160" ImageHeight="40" TextPatternColor="Blue" 
-                                    JavascriptURLDetection="False" ValidationMode="ViewState" Width="300px" />
+                                    JavascriptURLDetection="False" ValidationMode="ViewState" Width="300px" />  
+                                <asp:CustomValidator ID="CustomValidator1" runat="server" OnServerValidate="CustomValidator1_ServerValidate"
+                                  ErrorMessage="<%$ Resources: CapchaTestValidErrorMessage %>" ControlToValidate="CapchaTest" 
+                                    ValidationGroup="CreateUserWizard1"></asp:CustomValidator>
                             </li>
                         </ol>
                     </div>
@@ -95,9 +103,11 @@
            <asp:CompleteWizardStep ID="CompleteWizardStep2" runat="server">
                 <ContentTemplate>
                     <asp:Panel ID="VerificationPanel" runat="server" Visible="false">
-                        <strong><asp:Localize runat="server" ID="Localize1" Text="Thanks for registering with us" meta:resourcekey="VerificationInsructionsTitle" /></strong>
+                        <strong style="font-size: x-large"><asp:Localize runat="server" ID="Localize1" Text="Thanks for registering with us" meta:resourcekey="VerificationInsructionsTitle" /></strong>
                         <br />
-                        <asp:Localize runat="server" ID="Localize5" Text="Now wait for an email to be sent to the email address you specified with instructions to enable your account and login." meta:resourcekey="VerificationInsructions" />     
+                        <br />
+                        <font style="font-size: large"><asp:Localize runat="server" ID="Localize5" Text="Now wait for an email to be sent to the email address you specified with instructions to enable your account and login." meta:resourcekey="VerificationInsructions" /> 
+                        </font>    
                     </asp:Panel>
                 </ContentTemplate>
             </asp:CompleteWizardStep>

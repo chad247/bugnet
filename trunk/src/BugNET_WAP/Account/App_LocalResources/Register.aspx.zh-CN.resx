@@ -154,12 +154,18 @@
     <value>输入用户名.</value>
   </data>
   <data name="VerificationInsructions.Text" xml:space="preserve">
-    <value>请检查邮箱接收注册邮件,并通过给定的链接激活此账号.</value>
+    <value>系统已经发送了一封邮件到你注册用的邮箱,请通过邮件中的链接激活此账号.</value>
   </data>
   <data name="VerificationInsructionsTitle.Text" xml:space="preserve">
-    <value>感谢注册.</value>
+    <value>注册成功.</value>
   </data>
   <data name="TitleLabel.Text" xml:space="preserve">
     <value>注册新账号</value>
+  </data>
+  <data name="CapchaTestLabel.Text" xml:space="preserve">
+    <value>输入验证码</value>
+  </data>
+  <data name="CapchaTestValidErrorMessage" xml:space="preserve">
+    <value>验证码错误</value>
   </data>
 </root>

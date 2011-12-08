@@ -190,7 +190,7 @@
     <value>禁止</value>
   </data>
   <data name="DisplayName" xml:space="preserve">
-    <value>显示名称</value>
+    <value>显示名</value>
   </data>
   <data name="Due" xml:space="preserve">
     <value>到期</value>
@@ -373,13 +373,13 @@
     <value>用户账号</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>用户</value>
+    <value>登录名</value>
   </data>
   <data name="UsernameRequiredErrorMessage" xml:space="preserve">
     <value>Username is required</value>
   </data>
   <data name="Votes" xml:space="preserve">
-    <value>Votes</value>
+    <value>投票</value>
   </data>
   <data name="Weeks" xml:space="preserve">
     <value>weeks</value>
