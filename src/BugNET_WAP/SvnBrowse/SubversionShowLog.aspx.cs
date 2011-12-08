@@ -16,27 +16,26 @@ namespace BugNET.SvnBrowse
     public partial class SubversionShowLog : BugNET.UserInterfaceLayer.BasePage
     {
         private static Dictionary<int, string> errors = new Dictionary<int, string>();
-      
-        DataTable dt ;       
+
+        DataTable dt;
+        
         private string  singleLog = "";
         
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                
-                DataColumn column;
                 string svnUrl = "";
-                
+                DataColumn column;
+               
                 if (Request.QueryString["pid"] != null)
                 {
                     ProjectId = Convert.ToInt32(Request.QueryString["pid"]);
                     Project proj = ProjectManager.GetById(ProjectId);
                     svnUrl = proj.SvnRepositoryUrl;                     
-                }             
+                }
 
                 dt = new DataTable("Log");
-
                 column = new DataColumn();
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "Rev";
@@ -73,9 +72,22 @@ namespace BugNET.SvnBrowse
 
                 SvnReadLog(svnUrl);
                 
-                SvnLog.DataSource = dt;
-                SvnLog.DataBind();
+                //将表保存在session中
+
+                Session.Add("Log", dt);
+
+                //SvnLog.DataSource = dt;
+
+                //绑定数据
+                BindData();
             }
+        }
+
+        protected void BindData()
+        {
+            dt = Session["Log"] as DataTable;
+            SvnLog.DataSource = dt;
+            SvnLog.DataBind();
         }
 
         protected void SvnReadLog(string svnUrl)
@@ -111,7 +123,7 @@ namespace BugNET.SvnBrowse
             proc.WaitForExit();
         }
 
-        void proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
+        protected void proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
         {
             string s = e.Data;
             if (string.IsNullOrEmpty(e.Data)) s = "";
@@ -231,6 +243,19 @@ namespace BugNET.SvnBrowse
             }
             catch { }
         }
+
+        protected void SvnLog_PageIndexChanged(object sender, EventArgs e)
+        {
+            //SvnLog.DataSource = dt;
+            BindData();
+        }
+
+        protected void SvnLog_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            SvnLog.PageIndex = e.NewPageIndex;  
+        }
+
+
 
     }
 }
