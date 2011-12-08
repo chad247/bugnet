@@ -29,7 +29,7 @@
         </p>
     </asp:Panel>
     <p id="help">
-        <a target="_blank" href="http://bugnetproject.com/Documentation/tabid/57/topic/User%20Guide/Default.aspx">
+        <a target="_blank" href="www.opensoft.com.cn">
             <asp:Localize runat="server" ID="HelpText" Text="Help" meta:resourcekey="Help" /></a>
     </p>
 </div>

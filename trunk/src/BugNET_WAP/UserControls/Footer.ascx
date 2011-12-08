@@ -1,2 +1,2 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Footer.ascx.cs" Inherits="BugNET.UserControls.Footer" %>
-<p>Powered by <a href="http://www.bugnetproject.com">BugNET</a> <asp:Label ID="Version" runat="server" /></p>
+<p>Powered by <a href="http://www.opensoft.com.cn">BugNET</a> <asp:Label ID="Version" runat="server" /></p>
