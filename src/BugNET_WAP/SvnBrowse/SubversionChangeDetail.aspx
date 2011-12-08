@@ -21,14 +21,14 @@
               <asp:BoundField DataField="Date" HeaderText="Date"  ReadOnly="True" />
              <asp:TemplateField HeaderText="Log">                       
               <ItemTemplate>
-             <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" BorderWidth="0px" Text='<%# Bind("Log") %>' ReadOnly="true" BorderStyle="None"></asp:TextBox>
+             <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Font-Size="Small" BorderWidth="0px" Text='<%# Bind("Log") %>' ReadOnly="true" BorderStyle="None"></asp:TextBox>
               </ItemTemplate>
-              <ControlStyle Height="50px" Width="100%" />
+              <ControlStyle Height="100px" Width="100%" />
               <ItemStyle Wrap="True" />
               </asp:TemplateField>
               <asp:TemplateField HeaderText="Change">                       
               <ItemTemplate>
-             <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" BorderWidth="0px" Text='<%# Bind("Change") %>' ReadOnly="true" BorderStyle="None"></asp:TextBox>
+             <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Font-Size="Small" BorderWidth="0px" Text='<%# Bind("Change") %>' ReadOnly="true" BorderStyle="None"></asp:TextBox>
               </ItemTemplate>
               <ControlStyle Height="250px" Width="100%" />
               <ItemStyle Wrap="True" />
