@@ -19,18 +19,22 @@ namespace BugNET.SvnBrowse
         private static Dictionary<int, string> errors = new Dictionary<int, string>();
         DataTable dt;
         private string singleLog = "";
+        private string SvnUser = "admin";
+        private string SvnPassWord = "jinyaoshi";
+        private string SvnUrl = "";
+        private string SvnBugTragMessage = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {                
                 DataColumn column;
-                string svnUrl = "",rev = "";
+                string rev = "";
                 if (Request.QueryString["pid"] != null)
                 {
                     ProjectId = Convert.ToInt32(Request.QueryString["pid"]);
                     Project proj = ProjectManager.GetById(ProjectId);
-                    svnUrl = proj.SvnRepositoryUrl;
+                    SvnUrl = proj.SvnRepositoryUrl;
                 }
                 else return;             
                 if (Request.QueryString["id"] == null) return;
@@ -69,24 +73,33 @@ namespace BugNET.SvnBrowse
                 column.DataType = System.Type.GetType("System.String");
                 column.ColumnName = "Log";
                 column.ReadOnly = true;
+                dt.Columns.Add(column);
 
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "BugId";
+                column.ReadOnly = true;
                 dt.Columns.Add(column);
 
                 string command = "svn";
-                string args = string.Format("--username {0} --password {1} --non-interactive --trust-server-cert log {2} -v -r {3}", "admin", "jinyaoshi", svnUrl,rev);
+                string args = string.Format("--username {0} --password {1} --non-interactive --trust-server-cert log {2} -v -r {3}", SvnUser, SvnPassWord, SvnUrl,rev);
 
-                SvnReadLog(command,args);
+                singleLog=SvnReadLog(command,args);
+                SvnBugTragMessage = SvnReadBugTragMessage();
+
+                SvnChangeLog();
                 
                 ChangeView.DataSource = dt;
                 ChangeView.DataBind();
             }
         }
 
-        protected void SvnReadLog(string command,string args)
+        protected string SvnReadLog(string command,string args)
         {            
             //string args = string.Format("--username {0} --password {1} --non-interactive --trust-server-cert log {2}", "admin", "jinyaoshi", svnUrl);
             //string command = "cmd";
-            //string args = "dir";          
+            //string args = "dir";
+            string returnVal;
 
             Process proc = null;
 
@@ -95,7 +108,6 @@ namespace BugNET.SvnBrowse
             startInfo.UseShellExecute = false;
             startInfo.RedirectStandardOutput = true;
             //startInfo.RedirectStandardError = true;
-
 
             try
             {
@@ -109,17 +121,17 @@ namespace BugNET.SvnBrowse
                 throw new ApplicationException(ex.Message);
             }
 
-            singleLog = proc.StandardOutput.ReadToEnd();
-            //proc.BeginOutputReadLine();
-
+            returnVal = proc.StandardOutput.ReadToEnd();
+          
             proc.WaitForExit();
 
-            SvnChangeLog();
+            return returnVal;            
         }
 
         protected void SvnChangeLog()
         {
             if (singleLog.Length < 0) return;
+
             singleLog = singleLog.Substring(singleLog.IndexOf("--------\r\n") + 10, singleLog.IndexOf("\r\n--------") - singleLog.IndexOf("--------\r\n") - 10);
             var lines = singleLog.Split(new char[] { '|'});
             DataRow dr = dt.NewRow();
@@ -130,7 +142,18 @@ namespace BugNET.SvnBrowse
             dr["change"] = s.Substring(s.IndexOf("\r\n") + 2, s.IndexOf("\r\n\r\n", s.IndexOf("\r\n")) - s.IndexOf("\r\n") - 2);
             dr["log"] = s.Substring(s.IndexOf("\r\n\r\n") + 4);
 
+            //将问题ID与网页关联起来
+           
             dt.Rows.Add(dr);
+        }
+
+        protected string SvnReadBugTragMessage()
+        {
+            //获取问题跟踪属性设置            
+            string command = "svn";            
+            string args = string.Format("--username {0} --password {1} --non-interactive --trust-server-cert {2} {3} {4}", SvnUser, SvnPassWord, "propget", "bugtraq:message", SvnUrl);
+
+            return SvnReadLog(command, args);            
         }
 
         void proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
@@ -251,6 +274,12 @@ namespace BugNET.SvnBrowse
                 }
             }
             catch { }
+        }
+
+        protected void ChangeView_DataBinding(object sender, EventArgs e)
+        {
+            //
+            
         }
        
 
