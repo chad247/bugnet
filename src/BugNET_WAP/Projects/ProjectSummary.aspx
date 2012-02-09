@@ -99,7 +99,7 @@
         </HeaderTemplate> 
         <ItemTemplate>
             <tr>
-                <td class="item-column"><asp:HyperLink id="HyperLink1" Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>' NavigateUrl='<%# "~/Issues/IssueList.aspx?pid=" + HttpUtility.UrlEncode(ProjectId.ToString()) + "&u=" + HttpUtility.UrlEncode(DataBinder.Eval(Container.DataItem,"Id").ToString()) %>' runat="server" /></td>
+                <td class="item-column"><asp:HyperLink id="HyperLink1" Text='<%# DataBinder.Eval(Container.DataItem, "Name") %>' NavigateUrl='<%# "~/Issues/IssueList.aspx?pid=" + HttpUtility.UrlEncode(ProjectId.ToString()) + "&u=" + DataBinder.Eval(Container.DataItem,"Name") %>' runat="server" /></td>
                 <td class="count-column"><asp:label id="lblCount" runat="Server"></asp:label></td>  
             </tr> 
         </ItemTemplate> 
